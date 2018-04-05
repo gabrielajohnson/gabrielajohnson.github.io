@@ -204,7 +204,7 @@
 				var tree = getModel("JSON/leaftree.json",-200,300);
 				var tree1 = getModel("JSON/leaftree.json",-200,300);
 				var tree2 = getModel("JSON/leaftree.json",-250,300);
-				var utree1 = getModel("JSON/foliage/umbrellatree1.json",-250,10);
+				var utree1 = getModel("JSON/Foliage/umbrellatree1.json",-250,10);
 				
 				//treehouses
 				var treehouse1 = getModel("JSON/Treehouse/treehouse.json", -300, 40);
@@ -217,14 +217,14 @@
 				var box10 = getBox(boxMaterial, 30, 30, -350, 0);
 				//village
 				
-				var house = getModel("JSON/house/orangehouse.json", 5, 0, 0);
-				var house1 = getModel("JSON/house/orangehouse.json", -30, -50); 
-				var house2 = getModel("JSON/house/orangehouse.json", 0, -30);
-				var house3 = getModel("JSON/house/orangehouse.json", 30, -10);
-				var house4 = getModel("JSON/house/orangehouse.json", 20, 40);
-				var house5 = getModel("JSON/house/orangehouse.json", -20, 10);
+				var house = getModel("JSON/House/orangehouse.json", 5, 0, 0);
+				var house1 = getModel("JSON/House/orangehouse.json", -30, -50); 
+				var house2 = getModel("JSON/House/orangehouse.json", 0, -30);
+				var house3 = getModel("JSON/House/orangehouse.json", 30, -10);
+				var house4 = getModel("JSON/House/orangehouse.json", 20, 40);
+				var house5 = getModel("JSON/House/orangehouse.json", -20, 10);
 
-				var combohouse = getModel("JSON/house/combohouse1.json", 100, -250);
+				var combohouse = getModel("JSON/House/combohouse1.json", 100, -250);
 				//walls(material, length, width, x, y, z)
 				var treeblock = getTreeBox(boxMaterial, 20, 5, 0, 30, 0);
 				//castle
@@ -343,8 +343,8 @@
 				}*/
 				var Textureloader = new THREE.TextureLoader();
 				
-				var texture = Textureloader.load( 'textures/grass.jpg' );
-				texture.bumpMap = Textureloader.load( 'textures/grass.jpg' );
+				var texture = Textureloader.load( 'Textures/grass.jpg' );
+				texture.bumpMap = Textureloader.load( 'Textures/grass.jpg' );
 				texture.bumpScale = 5;
 				texture.wrapS = THREE.RepeatWrapping;
 				texture.wrapT = THREE.RepeatWrapping;
