@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Movement</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+			}
+			body {
+				background-color: #ffffff;
+				margin: 0;
+				overflow: hidden;
+				font-family: arial;
+			}
+			#blocker {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+			}
+			#instructions {
+				width: 100%;
+				height: 100%;
+				display: -webkit-box;
+				display: -moz-box;
+				display: box;
+				-webkit-box-orient: horizontal;
+				-moz-box-orient: horizontal;
+				box-orient: horizontal;
+				-webkit-box-pack: center;
+				-moz-box-pack: center;
+				box-pack: center;
+				-webkit-box-align: center;
+				-moz-box-align: center;
+				box-align: center;
+				color: #ffffff;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gyronorm@2.0.6/lib/gyronorm.min.js"></script>
+		<script src="PointerLockControls.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@hughsk/fulltilt@0.7.1/dist/fulltilt.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@hughsk/fulltilt@0.7.1/dist/fulltilt.min.js"></script>
+		<!--************************************************-->
+		<div id="blocker">
+
+			<div id="instructions">
+				<span style="font-size:40px">Click to play</span>
+				<br />
+				(W, A, S, D = Move, SPACE = Jump, MOUSE = Look around)
+			</div>
+
+		</div>
+		<!--************************************************-->
+		<script>
+			var camera, scene, renderer, controls;
+			var objects = [];
+			var raycaster;
+			var blocker = document.getElementById( 'blocker' );
+			var gn;
+			//var instructions = document.getElementById( 'instructions' );
+			var clock = new THREE.Clock();
+         
+			// http://www.html5rocks.com/en/tutorials/pointerlock/intro/
+			//***************************************************
+			
+			var havePointerLock = 'pointerLockElement' in document || 'mozPointerLockElement' in document || 'webkitPointerLockElement' in document;
+			if ( havePointerLock ) {
+				var element = document.body;
+				var pointerlockchange = function ( event ) {
+					if ( document.pointerLockElement === element || document.mozPointerLockElement === element || document.webkitPointerLockElement === element ) {
+						controlsEnabled = true;
+						controls.enabled = true;
+						blocker.style.display = 'none';
+					} else {
+						controls.enabled = false;
+						blocker.style.display = 'block';
+						instructions.style.display = '';
+					}
+				};
+				var pointerlockerror = function ( event ) {
+					instructions.style.display = '';
+				};
+				// Hook pointer lock state change events
+				document.addEventListener( 'pointerlockchange', pointerlockchange, false );
+				document.addEventListener( 'mozpointerlockchange', pointerlockchange, false );
+				document.addEventListener( 'webkitpointerlockchange', pointerlockchange, false );
+				document.addEventListener( 'pointerlockerror', pointerlockerror, false );
+				document.addEventListener( 'mozpointerlockerror', pointerlockerror, false );
+				document.addEventListener( 'webkitpointerlockerror', pointerlockerror, false );
+				instructions.addEventListener( 'click', function ( event ) {
+					instructions.style.display = 'none';
+					// Ask the browser to lock the pointer
+					element.requestPointerLock = element.requestPointerLock || element.mozRequestPointerLock || element.webkitRequestPointerLock;
+					element.requestPointerLock();
+				}, false );
+			} else {
+				instructions.innerHTML = 'Your browser doesn\'t seem to support Pointer Lock API';
+			}
+			//****************************************
+			init();
+			animate();
+			var controlsEnabled = false;
+			var moveForward = false;
+			var moveBackward = false;
+			var moveLeft = false;
+			var moveRight = false;
+			var canJump = false;
+			var prevTime = performance.now();
+			var velocity = new THREE.Vector3();
+			var direction = new THREE.Vector3();
+			
+			function init() {
+				/*****************************Gyrostorm*/
+					
+				
+
+			    
+
+				/*****************************Gyrostorm End*/
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1800 );
+				camera.position.y = -5;
+
+				//camera.position.y = 1800;
+				//camera.rotation.x = -Math.PI / 2;
+				scene = new THREE.Scene();
+				scene.background = new THREE.Color( 0x43dafd );
+				//scene.fog = new THREE.Fog( 0xffffff, 0, 750 );
+				//eeeeff
+				//777788
+				/*
+				var light = new THREE.HemisphereLight( 0xeeeeff, 0xfff3db, 0.75 );
+				light.position.set( 0.5, 1, 0.75 );
+				scene.add( light );
+				*/
+
+								// LIGHTS
+				hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
+				hemiLight.color.setHSL( 0.6, 1, 0.6 );
+				hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
+				hemiLight.position.set( 0, 50, 0 );
+				scene.add( hemiLight );
+				hemiLightHelper = new THREE.HemisphereLightHelper( hemiLight, 10 );
+				scene.add( hemiLightHelper );
+				//
+				dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+				dirLight.color.setHSL( 0.1, 1, 0.95 );
+				dirLight.position.set( -1, 1.75, 1 );
+				dirLight.position.multiplyScalar( 30 );
+				scene.add( dirLight );
+				dirLight.castShadow = true;
+				dirLight.shadow.mapSize.width = 2048;
+				dirLight.shadow.mapSize.height = 2048;
+				var d = 50;
+				dirLight.shadow.camera.left = -d;
+				dirLight.shadow.camera.right = d;
+				dirLight.shadow.camera.top = d;
+				dirLight.shadow.camera.bottom = -d;
+				dirLight.shadow.camera.far = 3500;
+				dirLight.shadow.bias = -0.0001;
+				dirLightHeper = new THREE.DirectionalLightHelper( dirLight, 10 ) 
+				scene.add( dirLightHeper );
+
+				//var dirlight = new THREE.DirectionalLight( 0xeeeeff, 0xfff3db, 0.75 );
+				//light.position.set( 0.5, 1, 0.75 );
+				//scene.add( light );
+
+				var boxMaterial = getMaterial('standard', 'rgb(255, 255, 255)');
+				var wallMaterial = getMaterial('standard','rgb(75,0,130)');
+				var box = getBox(boxMaterial, 24, 24, 100, 100);
+				//entrance getBox(material, length, width, x, z)
+				var entrance1 = getBox(boxMaterial, 10, 50, 20, 500);
+				var entrance2 = getBox(boxMaterial, 24, 24, -20, 500);
+				var entrance3 = getBox(boxMaterial, 24, 24, 60, 500);
+				var entrance4 = getModel("leaftree.json", 60, 450 );
+				var entrance5 = getModel("leaftree.json", -40, 450 );
+				var entrance6 = getModel("leaftree.json", 60, 390 );
+				var entrance7 = getModel("leaftree.json", -30, 400 );
+				var entrance8 = getModel("leaftree.json", 50, 300 );
+				var entrance9 = getModel("leaftree.json", -30, 320 );
+				//walls(material, length, width, x, z)
+				//var wall = getBox(wallMaterial, 1000, 40, 400,0);
+				//var wall2 = getBox(wallMaterial, 1000, 40, -380,0);
+				//var wall3 = getWall(wallMaterial, 40, 800, 10, 0,-500);
+				//var wall4 = getWall(wallMaterial, 40, 800, 10, 0,500);
+				//trees
+				var tree = getModel("leaftree.json",-200,300);
+				var tree1 = getModel("leaftree.json",-200,300);
+				var tree2 = getModel("leaftree.json",-250,300);
+				//treehouses
+				var box4 = getBox(boxMaterial, 30, 30, -300, 40);
+				var box5 = getBox(boxMaterial, 30, 30, -250, 40);
+				var box6 = getBox(boxMaterial, 30, 30, -350, 40);
+
+				var box7 = getBox(boxMaterial, 30, 30, -300, 0);
+				var box8 = getBox(boxMaterial, 30, 30, -250, 0);
+				var box9 = getBox(boxMaterial, 30, 30, -350, 0);
+				//village
+				var house1 = getBox(boxMaterial, 24, 24, -30, -50);
+				var house2 = getBox(boxMaterial, 24, 24, 0, -30);
+				var house3 = getBox(boxMaterial, 24, 24, 30, -10);
+				var house4 = getBox(boxMaterial, 24, 24, 20, 40);
+				var house5 = getBox(boxMaterial, 24, 24, -20, 10);
+				//castle
+				var castle = getBox(boxMaterial, 50, 50, 0, -400);
+				//lagoon
+				var lagoon = getBox(boxMaterial, 70, 70, 300, 0);
+				//var box3 = getBox(boxMaterial, 24, 10, 10);
+				//var box4 = getBox(boxMaterial, 24, 10, 10);
+				//var box5 = getBox(boxMaterial, 24, 10, 10);
+				//var box6 = getBox(boxMaterial, 24, 10, 10);
+				//var box7 = getBox(boxMaterial, 24, 10, 10);
+				//var box8 = getBox(boxMaterial, 24, 10, 10);
+				//var box9 = getBox(boxMaterial, 24, 10, 10);
+				//var box10 = getBox(boxMaterial, 24, 10, 10);
+				//var box11 = getBox(boxMaterial, 24, 10, 10);
+				//var box12 = getBox(boxMaterial, 24, 10, 10);
+				//var box13 = getBox(boxMaterial, 24, 10, 10);
+
+				//right wall getWall("mountain.json", start, end, rotate);
+				var rightWall = getWall("mountain.json", 400, -490, "false");
+				var leftWall = getWall("mountain.json", -400, -490, "false");
+				var topWall = getWall("mountain.json", -400, -490, "true");
+				var bottomWall = getWall("mountain.json", -400, 490, "true");
+
+
+				dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+				dirLight.color.setHSL( 0.1, 1, 0.95 );
+				dirLight.position.set( 5, 5, 5 );
+				dirLight.position.multiplyScalar( 100 );
+				scene.add( dirLight );
+				dirLight.castShadow = true;
+				dirLight.shadow.mapSize.width = 2048;
+				dirLight.shadow.mapSize.height = 2048;
+
+				//***************************************
+				
+				controls = new THREE.PointerLockControls(camera);
+				scene.add( controls.getObject() );
+				var onKeyDown = function ( event ) {
+					switch ( event.keyCode ) {
+						case 38: // up
+						case 87: // w
+							moveForward = true;
+							break;
+						case 37: // left
+						case 65: // a
+							moveLeft = true; break;
+						case 40: // down
+						case 83: // s
+							moveBackward = true;
+							break;
+						case 39: // right
+						case 68: // d
+							moveRight = true;
+							break;
+						case 32: // space
+							if ( canJump === true ) velocity.y += 200;
+							canJump = false;
+							break;
+					}
+				};
+				var onKeyUp = function ( event ) {
+					switch( event.keyCode ) {
+						case 38: // up
+						case 87: // w
+							moveForward = false;
+							break;
+						case 37: // left
+						case 65: // a
+							moveLeft = false;
+							break;
+						case 40: // down
+						case 83: // s
+							moveBackward = false;
+							break;
+						case 39: // right
+						case 68: // d
+							moveRight = false;
+							break;
+					}
+				};
+				document.addEventListener( 'keydown', onKeyDown, false );
+				document.addEventListener( 'keyup', onKeyUp, false );
+				raycaster = new THREE.Raycaster( new THREE.Vector3(), new THREE.Vector3( 0, - 1, 0 ), 0, 10 );
+				
+				//***********************************************
+				// floor
+
+				var floorGeometry = new THREE.PlaneGeometry( 800, 1000, 100, 100 );
+				floorGeometry.rotateX( - Math.PI / 2 );
+				/*for ( var i = 0, l = floorGeometry.vertices.length; i < l; i ++ ) {
+					var vertex = floorGeometry.vertices[ i ];
+					vertex.x += Math.random() * 20 - 10;
+					vertex.y += Math.random() * 2;
+					vertex.z += Math.random() * 20 - 10;
+				}*/
+				for ( var i = 0, l = floorGeometry.faces.length; i < l; i ++ ) {
+					var face = floorGeometry.faces[ i ];
+					face.vertexColors[ 0 ] = new THREE.Color().setHSL( Math.random() * 1.23 + 1, 0.75, 0.38  );
+					face.vertexColors[ 1 ] = new THREE.Color().setHSL( 1.23, 0.75, 0.38  );
+					face.vertexColors[ 2 ] = new THREE.Color().setHSL( 1.23, 0.75, 0.38  );
+				}
+				var Textureloader = new THREE.TextureLoader();
+				
+				var texture = Textureloader.load( 'grass.jpg' );
+				texture.bumpMap = Textureloader.load( 'grass.jpg' );
+				texture.bumpScale = 5;
+				texture.wrapS = THREE.RepeatWrapping;
+				texture.wrapT = THREE.RepeatWrapping;
+				texture.repeat.set( 80, 80 );
+				var floorMaterial = new THREE.MeshBasicMaterial( { map: texture } );
+
+				//var floorMaterial = new THREE.MeshBasicMaterial( { color:0x228B22 } );
+				var floor = new THREE.Mesh( floorGeometry, floorMaterial );
+				floor.position.set(0,0,0);
+				scene.add( floor );
+
+				var house = getModel("orangehouse1.json", 5, 0, 0);
+				    //object.rotation.y = 10;
+				var tree = getModel("leaftree.json",0,0);
+				var tree1 = getModel("leaftree.json",50,50);
+				var tree2 = getModel("leaftree.json",100,200);
+				var tree3 = getModel("leaftree.json",150,150);
+				var tree4 = getModel("leaftree.json",-100,100);
+				var tree5 = getModel("leaftree.json",0,100);
+				var tree6 = getModel("leaftree.json",200,300);
+				var tree7 = getModel("leaftree.json",0,100);
+				//tree.scale.set(50,50,50);
+
+				
+				//
+				renderer = new THREE.WebGLRenderer();
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				document.body.appendChild( renderer.domElement );
+				//
+				window.addEventListener( 'resize', onWindowResize, false );
+			}
+
+			function getModel(name, x, z) {
+				var loader = new THREE.ObjectLoader();
+					loader.load(name,function ( obj ) {
+					     var object = obj;
+					     object.position.set(x,0,z);
+					     //object.matrix.scale(50,50,50);
+					     object.recieveShadow = true;
+					     object.castShadow = true;
+					     objects.push( obj );
+					     scene.add( obj );
+					     return obj;
+
+
+			    });
+			}
+
+			function getBox(material, length, width, x, z) {
+				var geometry = new THREE.BoxGeometry(width, width, length);
+				var obj = new THREE.Mesh(geometry, material);
+				obj.castShadow = true;
+				obj.position.x = x;
+				obj.position.z = z;
+				obj.position.y = 0;
+				objects.push( obj );
+				scene.add(obj);
+				return obj;
+			}
+
+			/*function getWall(material, length, width, height, x, z) {
+				var geometry = new THREE.BoxGeometry(width, length, height);
+				var obj = new THREE.Mesh(geometry, material);
+				obj.castShadow = true;
+				obj.position.x = x;
+				obj.position.z = z;
+				obj.position.y = 0;
+				objects.push( obj );
+				scene.add(obj);
+				return obj;
+			}*/
+
+			function getWall(name, start, end, rotate) {
+				var loader = new THREE.ObjectLoader();
+					
+					loader.load(name,function ( obj ) {
+					     var object = obj;
+					       //console.log("rotate:" + rotate);
+					     /********************good
+					     if(rotate = "false"){
+					     	obj.position.set(start,0,end);
+					     	objects.push( obj );
+					        scene.add( obj );
+
+					     	if(end < 490){
+					     		getWall("mountain.json", start, end+29.5, "false");
+					     	}
+
+					     }/*******************good/
+					     if(rotate = "true"){
+					     	obj.rotation.y = Math.PI / 2;
+					     	obj.position.set(start,0,end);
+					     	objects.push( obj );
+					        scene.add( obj );
+
+					     	if(start < 400){
+					     		getWall("mountain.json", start+29.5, end, "true");
+					     	} 
+					     }*/
+					     
+					     //object.matrix.scale(50,50,50); 
+					     //object.recieveShadow = true;
+					     //object.castShadow = true;
+   
+					    // return obj;
+
+
+			    });
+			
+			}
+
+			function getMaterial(type, color) {
+				var selectedMaterial;
+				var materialOptions = {
+					color: color === undefined ? 'rgb(255, 255, 255)' : color,
+				};
+
+				switch (type) {
+					case 'basic':
+						selectedMaterial = new THREE.MeshBasicMaterial(materialOptions);
+						break;
+					case 'lambert':
+						selectedMaterial = new THREE.MeshLambertMaterial(materialOptions);
+						break;
+					case 'phong':
+						selectedMaterial = new THREE.MeshPhongMaterial(materialOptions);
+						break;
+					case 'standard':
+						selectedMaterial = new THREE.MeshStandardMaterial(materialOptions);
+						break;
+					default: 
+						selectedMaterial = new THREE.MeshBasicMaterial(materialOptions);
+						break;
+				}
+
+				return selectedMaterial;
+			}
+
+
+
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+
+			var index = 0;
+			function animate() {
+				requestAnimationFrame( animate );
+
+				if ( controlsEnabled === true ) {
+					raycaster.ray.origin.copy( controls.getObject().position );
+					raycaster.ray.origin.y -= 10;
+					var intersections = raycaster.intersectObjects( objects );
+					var onObject = intersections.length > 0;
+					var time = performance.now();
+					var delta = ( time - prevTime ) / 1000;
+					var timeElapsed = clock.getElapsedTime();
+					velocity.x -= velocity.x * 30.0 * delta;
+					velocity.z -= velocity.z * 30.0 * delta;
+					velocity.y -= 9.8 * 100.0 * delta; // 100.0 = mass
+					direction.z = Number( moveForward ) - Number( moveBackward );
+					direction.x = Number( moveLeft ) - Number( moveRight );
+					direction.normalize(); // this ensures consistent movements in all directions
+					if ( moveForward || moveBackward ) {
+						velocity.z -= direction.z * 400.0 * delta; 
+					    //controls.getObject().position.y += Math.sin(0); 
+					    //index += 1;
+					    //increase = (Math.sin(timeElapsed * 5 + index) + 1) / 2 + 0.001;
+					    index += 0.01;
+					    //console.log("Seconds:" + index);
+					    velocity.y -= index;
+					    //console.log(Math.sin(index));
+					    //controls.getObject().position.y = Math.sin(index);
+					    if (index > 1){
+					    	index = 0;
+					    }
+					    //console.log(Math.sin(timeElapsed - (timeElapsed - 1)));
+					    //velocity.y += direction.z * 400.0 * delta;
+					}
+					if ( moveLeft || moveRight ) velocity.x -= direction.x * 400.0 * delta;
+					if ( onObject === true ) {
+						velocity.y = Math.max( 0, velocity.y );
+						canJump = true;
+					}
+					controls.getObject().translateX( velocity.x * delta );
+					controls.getObject().translateY( velocity.y * delta );
+					controls.getObject().translateZ( velocity.z * delta );
+					if ( controls.getObject().position.y < 10 ) {
+						velocity.y = 0;
+						controls.getObject().position.y = 10;
+						canJump = true;
+					}
+					prevTime = time;
+				}
+				renderer.render( scene, camera );
+			}
+		</script>
+	</body>
+</html>
