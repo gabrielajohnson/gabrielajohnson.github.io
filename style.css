@@ -1,7 +1,7 @@
 html,body{
   margin:0;
   padding:0;
-  font-family:sans-serif !important;
+
 }
 
 .container{
@@ -41,6 +41,10 @@ html,body{
 	width:100%;
   /*box-shadow: 2px 1px 5px 5px #D3D3D3;*/
 
+}
+
+#nav h1{
+  font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -106,11 +110,40 @@ a{
   align-items: center;
 }
 
+#page3 h1{
+  font-family: 'Montserrat', sans-serif;
+}
+
 #page3 form{
   display:flex;
-  flex:wrap;
+  flex-direction: column;
+
+
+}
+
+input{
+  border-radius: 5px;
+  border:none;
+  padding:10px;
+
+  margin-top:5px;
+}
+
+
+
+#contact{
+  padding:10px;
+  padding-top:30px;
   background-color:#ddf9ff;
-  flex: 1;
+  width:50%;
+  margin:auto;
+  border-radius:5px;
+
+}
+
+.submit:hover{
+  background-color:#ddf9ff;
+  transition: background-color 1s;
 }
 
 @media only screen 
@@ -124,6 +157,9 @@ a{
     #page3{
       height:50vh;
     }
+    #nav h1{
+      font-size:2rem;
 
+    }
 
 }
