@@ -98,6 +98,20 @@ a{
   margin-top:-57%;
 }
 
+#page3{
+  height:100vh;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page3 form{
+  display:flex;
+  flex:wrap;
+  background-color:#ddf9ff;
+  flex: 1;
+}
 
 @media only screen 
   and (min-device-width: 320px) 
@@ -105,6 +119,9 @@ a{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     #page1{
+      height:50vh;
+    }
+    #page3{
       height:50vh;
     }
 
