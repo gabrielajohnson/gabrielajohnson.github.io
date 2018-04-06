@@ -1,9 +1,7 @@
-*{
-	margin: 0 auto;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
+html,body{
+  margin:0;
+  padding:0;
+  font-family:arial;
 }
 
 .container{
@@ -14,17 +12,15 @@
 }
 
 
-
 #page1{
 	padding-top:60px;
-	height:1000px;
+	height:100vh;
 	width:100%;
-	/*background: #43dafd;*/
+	background: #43dafd;
 	/*background-image: url('../../Downloads/ArtBox/redgirl.png'); */
 	background-repeat: no-repeat; 
 	background-position: center; 
 	background-size: cover; 
-	height:100%;
 	display: flex;
 	align-items: center;
 
@@ -62,11 +58,31 @@ a{
   height:50px;
 }
 
-#myVideo{
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+
+
+#page2{
+  background-color:#f6def1;
+  /*height:100vh;*/
+}
+
+#page2 h1{
+   padding-top:5%;
+}
+
+#portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-basis:50%;
+  padding-bottom:5%;
+
+}
+
+#portfolio img{
+  padding-top: 5%;
+  width:40%;
 }
 
 

@@ -1,0 +1,112 @@
+html,body{
+  margin:0;
+  padding:0;
+  font-family:sans-serif !important;
+}
+
+.container{
+	width:100%;
+}
+.container .row{
+	display:flex;
+}
+
+
+#page1{
+	padding-top:60px;
+	height:100vh;
+	width:100%;
+	background: white;
+	/*background-image: url('../../Downloads/ArtBox/redgirl.png'); */
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: cover; 
+	display: flex;
+	align-items: center;
+
+}
+
+#page1 h1{
+  font-size: 100px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+
+}
+
+#nav{
+	top:0;
+	position:fixed;
+	background-color:white;
+	height:60px;
+	width:100%;
+  /*box-shadow: 2px 1px 5px 5px #D3D3D3;*/
+
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-portfolio{
+   color:darkgray !important;
+   letter-spacing: 3px;
+}
+
+.button{
+  border: 2px blue solid;
+  border-radius:5px;
+  width:120px;
+  height:50px;
+  margin:auto;
+}
+
+
+
+#page2{
+  background-color:#ddf9ff;
+  /*height:100vh;*/
+}
+
+#page2 h1{
+   font-family: 'Montserrat', sans-serif;
+   padding-top:5%;
+}
+
+#portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-basis:50%;
+  padding-bottom:5%;
+
+}
+
+#portfolio img{
+  padding-top: 5%;
+  width:40%;
+}
+
+#portfolio img:nth-child(3){
+  margin-top:-25%;
+}
+
+#portfolio img:nth-child(5){
+  margin-top:-57%;
+}
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #page1{
+      height:50vh;
+    }
+
+
+}

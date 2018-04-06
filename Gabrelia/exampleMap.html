@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Movement</title>
+		<title>Galalea</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -193,8 +193,8 @@
 				var entrance1 = getBox(boxMaterial, 10, 50, 20, 500);
 				var entrance2 = getBox(boxMaterial, 24, 24, -20, 500);
 				var entrance3 = getBox(boxMaterial, 24, 24, 60, 500);
-				var entrance4 = getModel("JSON/leaftree.json", 60, 450 );
-				var entrance5 = getModel("JSON/leaftree.json", -40, 450 );
+				var entrance4 = getModel("JSON/redtree.json", 60, 450 );
+				var entrance5 = getModel("JSON/redtree.json", -40, 450 );
 				var entrance6 = getModel("JSON/leaftree.json", 60, 390 );
 				var entrance7 = getModel("JSON/leaftree.json", -30, 400 );
 				var entrance8 = getModel("JSON/leaftree.json", 50, 300 );
@@ -526,7 +526,7 @@
 					    	index = 0;
 					    }
 					    var yPosition = controls.getObject().position.y;
-					    console.log("Y position" + yPosition);
+					    /*console.log("Y position" + yPosition);*/
 					    yPosition = yPosition + 1;
 					    //console.log(Math.sin(timeElapsed - (timeElapsed - 1)));
 					    //velocity.y += direction.z * 400.0 * delta;
