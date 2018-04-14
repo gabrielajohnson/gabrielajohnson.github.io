@@ -4,7 +4,7 @@
 	<title>Galalea Local</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 	<style>
 		html, body {
 			width: 100%;
@@ -194,7 +194,7 @@
 			var Textureloader = new THREE.TextureLoader();
 			var geometry = new THREE.SphereGeometry(1000, 60, 40);  
 			var uniforms = {  
-			  texture: { type: 't', value: Textureloader.load('/Textures/sky1.jpg') }
+			  texture: { type: 't', value: Textureloader.load('Textures/sky1.jpg') }
 			};
 
 			var material = new THREE.ShaderMaterial( {  
@@ -252,22 +252,22 @@
 			//village
 			//getModel(name, x, z, rotateY)
 			
-			var house1 = getModel("JSON/house/whitehouse.json", -50, 0, -60, 0);
-			var house2 = getModel("JSON/house/whitehouse.json", 0, 0, -30, 20);
-			var house3 = getModel("JSON/house/whitehouse.json", 45, 0, -25, 50);
-			var house4 = getModel("JSON/house/whitehouse.json", 80, 0, 20, -5);
-			var house5 = getModel("JSON/house/whitehouse.json", -35, 0, 0, 25);
-			var house6 = getModel("JSON/house/whitehouse.json", -20, 0, 50, -5);
-			var house7 = getModel("JSON/house/whitehouse.json", -62, 0, 60, -5);
-			var house8 = getModel("JSON/house/whitehouse.json", -40, 0, 115, -5);
-			var house9 = getModel("JSON/house/whitehouse.json", 75, 0, 100, -5);
-			var house10 = getModel("JSON/house/whitehouse.json", 10, 0, 90, -5);
-			var house11 = getModel("JSON/house/whitehouse.json", 60, 0, -150, -5);
-			var house12 = getModel("JSON/house/whitehouse.json", -50, 0, -130, -5);
+			var house1 = getModel("JSON/House/whitehouse.json", -50, 0, -60, 0);
+			var house2 = getModel("JSON/House/whitehouse.json", 0, 0, -30, 20);
+			var house3 = getModel("JSON/House/whitehouse.json", 45, 0, -25, 50);
+			var house4 = getModel("JSON/House/whitehouse.json", 80, 0, 20, -5);
+			var house5 = getModel("JSON/House/whitehouse.json", -35, 0, 0, 25);
+			var house6 = getModel("JSON/House/whitehouse.json", -20, 0, 50, -5);
+			var house7 = getModel("JSON/House/whitehouse.json", -62, 0, 60, -5);
+			var house8 = getModel("JSON/House/whitehouse.json", -40, 0, 115, -5);
+			var house9 = getModel("JSON/House/whitehouse.json", 75, 0, 100, -5);
+			var house10 = getModel("JSON/House/whitehouse.json", 10, 0, 90, -5);
+			var house11 = getModel("JSON/House/whitehouse.json", 60, 0, -150, -5);
+			var house12 = getModel("JSON/House/whitehouse.json", -50, 0, -130, -5);
 
 			var fountain = getModel("JSON/fountain.json", 15, 0, 45, 0);
 
-			var combohouse = getModel("JSON/house/whitehouse.json", 100, 0, -250, 0);
+			var combohouse = getModel("JSON/House/whitehouse.json", 100, 0, -250, 0);
 			//walls(material, length, width, x, y, z)
 			var treeblock = getTreeBox(boxMaterial, 20, 5, 0, 30, 0);
 			//castle
@@ -453,8 +453,8 @@
 			}*/
 			
 			
-			var texture = Textureloader.load( 'textures/basicmap.jpg' );
-			texture.bumpMap = Textureloader.load( 'textures/basicmap.jpg' );
+			var texture = Textureloader.load( 'Textures/basicmap.jpg' );
+			texture.bumpMap = Textureloader.load( 'Textures/basicmap.jpg' );
 			texture.bumpScale = 5;
 			/*texture.wrapS = THREE.RepeatWrapping;*/
 			/*texture.wrapT = THREE.RepeatWrapping;*/
