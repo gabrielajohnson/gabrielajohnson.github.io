@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+		<script src ="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 		<title>Gabriela Johnson</title>
@@ -16,11 +17,7 @@
 			     		<a class = "col-sm-2 col-lg-1 nav-portfolio" href = "#page1">Home</a>
 			     		<a class = "col-sm-2 col-lg-1 nav-portfolio" href = "#page2">Portfolio</a>
 			     		<a class = "col-sm-2 col-lg-1 nav-portfolio" href = "#page3">Contact</a>
-			     		<!--<a class = "col-sm-1" href = "node_modules/gyronorm/demo/index.html">Demo</a>
-			     		<a class = "col-sm-1" href = "prototype.html">Demo1</a>
-			     			<a class = "col-sm-1" href = "VR.html">VR Demo</a>
-			     			<a class = "col-sm-1" href = "vr-interactives-three-js-master/three-demo-complete.html">VR1 Demo</a>
-			     			<a class = "col-sm-1" href = "prototype1.html">VR2 Demo</a>-->
+			     		
 				  </div>
 		     </div>
 		</div>
@@ -32,12 +29,12 @@
 				    <h1>Gabriela Johnson</h1>
 				    
 			</div>
-			  <a class = "button" href="Gabrelia/exampleMap.html" role="button">Enter World</a>
+			  <a class = "button" href="Gabrelia/index1.html" role="button">Enter World</a>
 		  </div>
 		</div>
 
-    <div id = "page2">
-      <h1 class = "text-center">Portfolio</h1>  
+    <!--<div id = "page2">-->
+      <!--<h1 class = "text-center">Portfolio</h1>  
       <div id = "portfolio">
           <img src = "Portfolio/tiedye.jpeg">
           <img src = "Portfolio/nightunderstars.png">
@@ -46,6 +43,105 @@
           <img src = "Portfolio/shazamportfolio1.png">
           <img src = "Portfolio/cocoa1.png">
         </div>
+        <h1 class="text-center">Portfolio</h1>-->
+	<div id = "page2">
+		<h1 class="text-center">Portfolio</h1>
+		<div id="photos">
+		  <ul id="photo-gallery">
+		    <li>
+		      <a href="Portfolio/tiedye.jpeg">
+		        <img src="Portfolio/tiedye.jpeg">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/nightunderstars.png">
+		        <img src="Portfolio/nightunderstars.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/WomeninStem.png">
+		        <img src="Portfolio/WomeninStem.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/PhilanthropyWeek.png">
+		        <img src="Portfolio/PhilanthropyWeek.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/shazamportfolio1.png">
+		        <img src="Portfolio/shazamportfolio1.png"></a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/cocoa1.png">
+		        <img src="Portfolio/cocoa1.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/eopologo.png">
+		        <img src="Portfolio/eopologo.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/Grubupblack.png"><img src="Portfolio/Grubupblack.png">
+		      </a>
+		    </li>
+		       <li>
+		      <a href="Portfolio/ThetaPhiFlyer.png">
+		        <img src="Portfolio/ThetaPhiFlyer.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/Grubupred.png">
+		        <img src="Portfolio/Grubupred.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/Grubupnation.png">
+		        <img src="Portfolio/Grubupnation.png">
+		      </a>
+		    </li>
+		     <li>
+		      <a href="Portfolio/betathetaphigetpie.png">
+		        <img src="Portfolio/betathetaphigetpie.png">
+		      </a>
+		    </li>
+		  </ul>
+		</div>
+
+
+
+		<h1 class = "text-center">At Princeton Partners</h1>
+		<div id="photos">
+		  <ul id="photo-gallery">
+		    <li>
+		      <a href="Portfolio/businesscard.png">
+		        <img src="Portfolio/businesscard.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/Zombie_Tshirt_design.png">
+		        <img src="Portfolio/Zombie_Tshirt_design.png">
+		      </a>
+		    </li>
+		  </ul>
+		</div>
+
+		<h1 class = "text-center">At Bai Brands</h1>
+		<div id="photos">
+		  <ul id="photo-gallery">
+		    <li>
+		      <a href="Portfolio/businesscard.png">
+		        <img src="Portfolio/businesscard.png">
+		      </a>
+		    </li>
+		    <li>
+		      <a href="Portfolio/Zombie_Tshirt_design.png">
+		        <img src="Portfolio/Zombie_Tshirt_design.png">
+		      </a>
+		    </li>
+		  </ul>
+		</div>
     </div>
 
     <div id = "page3">
@@ -60,8 +156,41 @@
 		</form>
     </div>
 	</div>
-    
+
+
+	
 
 	</body>
 </html>
+
+
+
+
+<script>
+
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+
+//An image to overlay
+$overlay.append($image);
+
+//Add overlay
+$("html").prepend($overlay);
+
+  //click the image and a scaled version of the full size image will appear
+  $("#photo-gallery a").click( function(event) {
+    event.preventDefault();
+    var imageLocation = $(this).attr("href");
+
+    //update overlay with the image linked in the link
+    $image.attr("src", imageLocation);
+
+    //show the overlay
+    $overlay.show();
+  } );
+
+  $("#overlay").click(function() {
+    $( "#overlay" ).hide();
+  });
+</script>
 
