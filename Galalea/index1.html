@@ -727,8 +727,7 @@
 			floor.position.set(0,0,0);
 			floor.recieveShadow = true;
 			scene.add( floor );
-			console.log(floor);
-			//
+					//
 			renderer = new THREE.WebGLRenderer();
 			renderer.setPixelRatio( window.devicePixelRatio );
 			renderer.setSize( window.innerWidth, window.innerHeight );
@@ -748,7 +747,7 @@
 	    for(var k = 0; k < 70; k++){
 	        grass.position.x= (Math.random() * 500) - 250;//Math.random() * (380 - (-370)) + 10;
 	        grass.position.z= (Math.random() * 500) - 250;//Math.random() * (380 - (-370)) + 10;
-	        console.log(Math.floor(Math.random() * 401) - 100);
+	        //console.log(Math.floor(Math.random() * 401) - 100);
 		        var grass0=grass.clone();
 		        scene.add(grass0);
 		        var grass1=grass.clone();
@@ -966,7 +965,7 @@
 					scene.traverse( function ( object ) {
 						//console.log(sword.name);
 						if(object.name === "sword.json" && object.visible === true){
-							console.log("entered");
+							//console.log("entered");
 							object.visible = false;
 							score++;
 							document.getElementById('score').innerHTML = "Artifacts Found: " + score + "/4";
@@ -982,7 +981,7 @@
 					scene.traverse( function ( object ) {
 						//console.log(sword.name);
 						if(object.name === "scroll.json" && object.visible === true){
-							console.log("entered");
+							//console.log("entered");
 							object.visible = false;
 							score++;
 							document.getElementById('score').innerHTML = "Artifacts Found: " + score + "/4";
@@ -1008,7 +1007,7 @@
 					} );
 				}
 				if(controls.getObject().position.x >= 279 && controls.getObject().position.x < 282 && controls.getObject().position.z >= 319 && controls.getObject().position.z < 322){
-					console.log("Found the scepter");
+					//console.log("Found the scepter");
 					scene.traverse( function ( object ) {
 						//console.log(sword.name);
 
