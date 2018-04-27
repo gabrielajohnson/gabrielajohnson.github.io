@@ -5,173 +5,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
-	<style>
-		html, body {
-			width: 100%;
-			height: 100%;
-			background-color:transparent;
-		}
-		body {
-			background-color:transparent;
-			margin: 0;
-			overflow: hidden;
-			font-family: arial;
-		}
-		#blocker {
-			position: absolute;
-			width: 80%;
-			height: 80%;
-			margin: 0 auto;
-			background-color: rgba(0,0,0,0.5);
-			right:0;
-			left:0;
-		}
-		#instructions {
-			margin:0;
-			background-color:transparent;
-			width: 100%;
-			height: 100%;
-			display: -webkit-box;
-			display: -moz-box;
-			display: box;
-			-webkit-box-orient: horizontal;
-			-moz-box-orient: horizontal;
-			box-orient: horizontal;
-			-webkit-box-pack: center;
-			-moz-box-pack: center;
-			box-pack: center;
-			-webkit-box-align: center;
-			-moz-box-align: center;
-			box-align: center;
-			color: #ffffff;
-			text-align: center;
-			cursor: pointer;
-		}
-
-		#info{
-			display:flex;
-			vertical-align: center;
-			justify-content:space-between;
-			background-color:transparent;
-			bottom:0;
-			position:fixed;
-			width:100%;
-		}
-
-		#info p{
-			background-color:transparent;
-			display:inline;
-			padding:10px;
-			color:white;
-
-		}
-
-		#goal {
-			position: absolute;
-			width: 80%;
-			height: 80%;
-			margin: 0 auto;
-			background-color: rgba(0,0,0,0.5);
-			right:0;
-			left:0;
-			display:none;
-		}
-
-		#exit{
-			width:100%;
-			height:50px;
-			background-color:blue;
-		}
-
-		#loading-screen {
-			position: absolute;
-			z-index: 2;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #000000;
-			opacity: 1;
-		 	transition: 1s opacity;
-		}
-
-	#loading-screen.fade-out {
-	    opacity: 0;
-	}
-
-	#loader {
-	    display: block;
-	    position: relative;
-	    left: 50%;
-	    top: 50%;
-	    width: 150px;
-	    height: 150px;
-	    margin: -75px 0 0 -75px;
-	    border-radius: 50%;
-	    border: 3px solid transparent;
-	    border-top-color: #9370DB;
-	    -webkit-animation: spin 2s linear infinite;
-	    animation: spin 2s linear infinite;
-	}
-	#loader:before {
-	    content: "";
-	    position: absolute;
-	    top: 5px;
-	    left: 5px;
-	    right: 5px;
-	    bottom: 5px;
-	    border-radius: 50%;
-	    border: 3px solid transparent;
-	    border-top-color: #BA55D3;
-	    -webkit-animation: spin 3s linear infinite;
-	    animation: spin 3s linear infinite;
-	}
-	#loader:after {
-	    content: "";
-	    position: absolute;
-	    top: 15px;
-	    left: 15px;
-	    right: 15px;
-	    bottom: 15px;
-	    border-radius: 50%;
-	    border: 3px solid transparent;
-	    border-top-color: #FF00FF;
-	    -webkit-animation: spin 1.5s linear infinite;
-	    animation: spin 1.5s linear infinite;
-	}
-	@-webkit-keyframes spin {
-	    0%   {
-	        -webkit-transform: rotate(0deg);
-	        -ms-transform: rotate(0deg);
-	        transform: rotate(0deg);
-	    }
-	    100% {
-	        -webkit-transform: rotate(360deg);
-	        -ms-transform: rotate(360deg);
-	        transform: rotate(360deg);
-	    }
-	}
-	@keyframes spin {
-	    0%   {
-	        -webkit-transform: rotate(0deg);
-	        -ms-transform: rotate(0deg);
-	        transform: rotate(0deg);
-	    }
-	    100% {
-	        -webkit-transform: rotate(360deg);
-	        -ms-transform: rotate(360deg);
-	        transform: rotate(360deg);
-	    }
-	}
-
-	</style>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.js"></script>
 	<script src="js/PointerLockControls.js"></script>
 	<!--/************************************************-->
 	<section id="loading-screen">
-
+			<p> Preparing Galalea... </p>
 		<div id="loader"></div>
 
 	</section>
@@ -179,15 +21,17 @@
 	<div id="blocker">
 
 		<div id="instructions">
-			<span style="font-size:40px">Click to play</span>
+			<span style="font-size:40px">Welcome to the World of Galalea</span>
 			<br />
+			Collect all 4 Artifacts<br>
+			You must collect the sword, the scroll, the scepter and the stone.<br>
+			After completing your quest feel free to explore the world!<br><br>
 			<Strong>How To Play</Strong><br>
 			W, A, S, D = Move<br>
 			SPACE = Jump<br>
 			MOUSE = Look around<br><br>
-			Collect all 4 Artifacts<br>
-			You must collect the sword, the scroll, and the stone.<br>
-			After completing your quest feel free to explore the world!
+
+			<span style="font-size:30px">Click to start exploring!</span>
 		</div>
 
 	</div>
@@ -264,18 +108,18 @@
 
 		var clock = new THREE.Clock();
 
-		var starsGeometry = new THREE.Geometry();
+		var waterFallGeometry = new THREE.Geometry();
 
 			for ( var i = 0; i < 10500; i ++ ) {
-				var star = new THREE.Vector3();
-				star.x = THREE.Math.randFloatSpread( 15 );
-				star.y = THREE.Math.randFloatSpread( (Math.random() - 10) + 50 );
-				star.z = THREE.Math.randFloatSpread( 5 );
+				var water = new THREE.Vector3();
+				water.x = THREE.Math.randFloatSpread( 15 );
+				water.y = THREE.Math.randFloatSpread( (Math.random() - 10) + 50 );
+				water.z = THREE.Math.randFloatSpread( 5 );
 
-				starsGeometry.vertices.push( star );
+				waterFallGeometry.vertices.push( water );
 			}
 
-				var starsMaterial = new THREE.PointsMaterial({
+				var waterFallMaterial = new THREE.PointsMaterial({
 					color: 0x155dca, 
 					size: 10, 
 					opacity: 1, 
@@ -288,7 +132,7 @@
 			
 			//}
 			//color: 0x174fb4
-			var starField = new THREE.Points( starsGeometry, starsMaterial );
+			var waterFallSystem = new THREE.Points( waterFallGeometry, waterFallMaterial );
 
 		//Haze
 			var Textureloader = new THREE.TextureLoader();
@@ -400,8 +244,8 @@
 			//hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
 			hemiLight.position.set( 50, 20, 50 );
 			scene.add( hemiLight );
-			hemiLightHelper = new THREE.HemisphereLightHelper( hemiLight, 10 );
-			scene.add( hemiLightHelper );
+			//hemiLightHelper = new THREE.HemisphereLightHelper( hemiLight, 10 );
+			//scene.add( hemiLightHelper );
 
 
 			hemiLight1 = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
@@ -409,8 +253,8 @@
 			//hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
 			hemiLight1.position.set( 100, 60, 100 );
 			scene.add( hemiLight1 );
-			hemiLightHelper1 = new THREE.HemisphereLightHelper( hemiLight, 10 );
-			scene.add( hemiLightHelper1 );
+			//hemiLightHelper1 = new THREE.HemisphereLightHelper( hemiLight, 10 );
+			//scene.add( hemiLightHelper1 );
 
 
 			var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
@@ -418,7 +262,7 @@
 			directionalLight.castShadow = true;
 			directionalHelper = new THREE.DirectionalLightHelper( directionalLight, 10 );
 			scene.add( directionalLight );
-			scene.add( directionalHelper );
+			//scene.add( directionalHelper );
 
 		/*	renderer.shadowMap.enabled = true;
 			renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -457,11 +301,11 @@
 			//skybox
 
 			//starField
-			scene.add( starField );
-			starField.position.z = -47;
-			starField.position.x = 315;
+			scene.add( waterFallSystem );
+			waterFallSystem.position.z = -47;
+			waterFallSystem.position.x = 315;
 			//starField.position.y = 50;
-			starField.rotation.y = -Math.PI/2;
+			waterFallSystem.rotation.y = -Math.PI/2;
 
 			//hazeField
 			//scene.add( hazeField );
@@ -477,8 +321,8 @@
 			
 			//artifacts
 			sword = getModel("JSON/Artifacts/sword.json", -280, 0, -60, 0);
-			scroll = getModel("JSON/Artifacts/scroll.json", 10, 0, 10, 0);
-			gem = getModel("JSON/Artifacts/gem.json", 15, 0, 15, 0);
+			scroll = getModel("JSON/Artifacts/scroll.json", 10, 0, -350, 0);
+			gem = getModel("JSON/Artifacts/gem.json", 300, 0, -40, 0);
 			scepter = getModel("JSON/Artifacts/scepter.json", 280, 20, 320, 0);
 
 			//entrance getBox(material, length, width, width2, x, z, rotate)
@@ -606,7 +450,11 @@
 			var tree29 = getModel("JSON/leaftree4.json",340, 0, 370, 0);
 			var tree30 = getModel("JSON/leaftree4.json",180, 0, 370, 0);
 			var tree31 = getModel("JSON/leaftree4.json",-220, 0, 390, 0);
-			//var utree1 = getModel("JSON/foliage/umbrellatree1.json",-250,10, 0);
+			
+
+			var utree1 = getModel("JSON/Foliage/umbrellatree1.json", -250, 0, 250, 0);
+			
+
 			var talltree = getModel("JSON/Foliage/talltree2.json",10, 0, 10, 0);
 			var talltree1 = getModel("JSON/Foliage/talltree2.json",110, 0, -50, 0);
 			var talltree2 = getModel("JSON/Foliage/talltree2.json",-110, 0, 100, 0);
@@ -621,7 +469,7 @@
 			var talltree9 = getModel("JSON/Foliage/talltree2.json", 350, 0, 190, 0);
 
 			//lagoon
-			var lagoon = getModel("JSON/Lagoon/lagoon.json", 300, 0, -40, 0);
+			var lagoon = getModel("JSON/Lagoon/Lagoon.json", 300, 0, -40, 0);
 			//getBox(material, length, width, width2, x, y, z, rotate)
 			//var lagoon = getBox(boxMaterial, 70, 70, 20, 300, -10, -40, 0);
 
@@ -778,6 +626,22 @@
 		        scene.add(grass3);
 	      }
 
+	       for(var k = 0; k < 70; k++){
+	        grass.position.x= (Math.random() * -500) + 250;//Math.random() * (380 - (-370)) + 10;
+	        grass.position.z= (Math.random() * 350);//Math.random() * (380 - (-370)) + 10;
+	        //console.log(Math.floor(Math.random() * 401) - 100);
+		        var grass0=grass.clone();
+		        scene.add(grass0);
+		        var grass1=grass.clone();
+		        scene.add(grass1);
+		        grass1.rotation.y=0.25*Math.PI;
+		        var grass2=grass.clone()
+		        grass2.rotation.y=-0.25*Math.PI;
+		        scene.add(grass2);
+		        var grass3=grass.clone()
+		        grass3.rotation.y=0.5*Math.PI;
+		        scene.add(grass3);
+	      }
 
 		}
 
@@ -915,24 +779,24 @@
 	}
 
 		var x = 0;
-		controls.getObject().position.x = 200;
+		controls.getObject().position.z = 380;
 		function animate() {
 			requestAnimationFrame( animate );
 
 
 //Particle System
 /*****************************************************************/
-			starField.geometry.vertices.forEach(function(star) {
+			waterFallSystem.geometry.vertices.forEach(function(water) {
 		
-				star.y += (Math.random() - 0.75) * 0.5;
+				water.y += (Math.random() - 0.75) * 0.5;
 
-				if(star.y < 0) {
-					star.y = (Math.random() - 2) + 45;
+				if(water.y < 0) {
+					water.y = (Math.random() - 2) + 45;
 
 				}
 
 			});
-			starField.geometry.verticesNeedUpdate = true;
+			waterFallSystem.geometry.verticesNeedUpdate = true;
 /*****************************************************************/
 
 			if ( controlsEnabled === true ) {
@@ -960,12 +824,12 @@
 					goal.style.display = 'none';
 				}
 
-				if(controls.getObject().position.x >= 5 && controls.getObject().position.x < 6 && controls.getObject().position.z >= 5 && controls.getObject().position.z < 6 ){
+				if(controls.getObject().position.x <= -279 && controls.getObject().position.x >= -281 && controls.getObject().position.z <= -59 && controls.getObject().position.z >= -61 ){
 					//console.log(controls.getObject().position);
 					scene.traverse( function ( object ) {
 						//console.log(sword.name);
 						if(object.name === "sword.json" && object.visible === true){
-							//console.log("entered");
+							console.log("entered");
 							object.visible = false;
 							score++;
 							document.getElementById('score').innerHTML = "Artifacts Found: " + score + "/4";
@@ -976,7 +840,7 @@
 			
 				}
 
-				if(controls.getObject().position.x >= 10 && controls.getObject().position.x < 11 && controls.getObject().position.z >= 10 && controls.getObject().position.z < 11){
+				if(controls.getObject().position.x >= 9 && controls.getObject().position.x <= 11 && controls.getObject().position.z <= -349 && controls.getObject().position.z >= -351){
 
 					scene.traverse( function ( object ) {
 						//console.log(sword.name);
@@ -991,7 +855,7 @@
 					} );
 				}
 
-				if(controls.getObject().position.x >= 15 && controls.getObject().position.x < 16 && controls.getObject().position.z >= 15 && controls.getObject().position.z < 16){
+				if(controls.getObject().position.x >= 299 && controls.getObject().position.x <= 301 && controls.getObject().position.z <= -39 && controls.getObject().position.z >= -41){
 
 					scene.traverse( function ( object ) {
 						//console.log(sword.name);
