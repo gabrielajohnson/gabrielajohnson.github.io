@@ -112,8 +112,8 @@
 	    border-radius: 50%;
 	    border: 3px solid transparent;
 	    border-top-color: #155dca;
-	    -webkit-animation: spin 2s linear infinite;
-	    animation: spin 2s linear infinite;
+	    -webkit-animation: spin 3s linear infinite;
+	    animation: spin 3s linear infinite;
 	}
 	#loader:before {
 	    content: "";
@@ -137,9 +137,9 @@
 	    bottom: 15px;
 	    border-radius: 50%;
 	    border: 3px solid transparent;
-	    border-top-color: #FF00FF;
-	    -webkit-animation: spin 1.5s linear infinite;
-	    animation: spin 1.5s linear infinite;
+	    border-top-color: #155dca;
+	    -webkit-animation: spin 2s linear infinite;
+	    animation: spin 2s linear infinite;
 	}
 	@-webkit-keyframes spin {
 	    0%   {

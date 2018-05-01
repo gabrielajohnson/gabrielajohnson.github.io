@@ -17,7 +17,7 @@ html,body{
 	height:100vh;
 	width:100%;
 	background: white;
-	/*background-image: url('../../Downloads/ArtBox/redgirl.png'); */
+	background-image: url("Galalea/waterfall.png"); 
 	background-repeat: no-repeat; 
 	background-position: center; 
 	background-size: cover; 
@@ -29,7 +29,7 @@ html,body{
 #page1 h1{
   font-size: 100px;
   font-family: 'Montserrat', sans-serif;
-  color: black;
+  color: white;
 
 }
 
@@ -43,8 +43,22 @@ html,body{
 
 }
 
+.nav-portfolio{
+   color:darkgray;
+   letter-spacing: 3px;
+}
+
 #nav h1{
   font-family: 'Montserrat', sans-serif;
+}
+
+#nav a{
+  text-decoration:none;
+  transition:0.5s;
+}
+
+#nav a:hover{
+  color:black;
 }
 
 a{
@@ -53,19 +67,23 @@ a{
     align-items: center;
 }
 
-.nav-portfolio{
-   color:darkgray !important;
-   letter-spacing: 3px;
-}
+
 
 .button{
   border: 2px blue solid;
+  background-color:white;
   border-radius:5px;
   width:120px;
   height:50px;
   margin:auto;
+  transition:0.5s;
 }
 
+.button:hover{
+  background-color:blue;
+  color:white;
+  text-decoration:none;
+}
 
 
 #page2{
