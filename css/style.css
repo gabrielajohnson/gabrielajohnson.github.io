@@ -95,7 +95,12 @@ a:active {
   }
 
   #page1 p{
+        margin-top:8px;
         font-size:20px;
+  }
+
+  #page1 a{
+    padding-top:12;
   }
 
 
