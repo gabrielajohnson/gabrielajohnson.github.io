@@ -154,7 +154,11 @@ a:active {
         transition: background-color 1s;
       }
 
-@media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
     #page1 h1{
     	font-size:80px;
     }
