@@ -111,10 +111,20 @@ a:active {
 /**********************************/
 
        #page3{
-        height:80vh;
+        /*height:80vh;
         width:100%;
         display:flex;
         justify-content: center;
+        align-items: center;*/
+        background-image: url(Users/GabrielaJohnson/GitHub/gabrielajohnson.github.io/images/leaves.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        display: flex;
         align-items: center;
 
       }
