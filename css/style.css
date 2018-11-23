@@ -6,7 +6,7 @@
 
 .links{
   float:right;
-  padding-right:20px; 
+  padding-right:20px;
 }
 
 .topnav p{
@@ -44,6 +44,10 @@ a:active {
   display: none;
 }
 
+.fab{
+  color:black;
+  font-size:3em;
+}
 
 @media screen and (max-width: 600px) {
   .topnav a {display: none;}
@@ -112,7 +116,7 @@ a:active {
         display:flex;
         justify-content: center;
         align-items: center;
-     
+
       }
 
       #page3 h1{
@@ -160,8 +164,8 @@ a:active {
         transition: background-color 1s;
       }
 
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
@@ -169,5 +173,3 @@ a:active {
     	font-size:80px;
     }
 }
-
-
