@@ -18,9 +18,9 @@ html,body{
 	width:100%;
 	background: #43dafd;
 	/*background-image: url('../../Downloads/ArtBox/redgirl.png'); */
-	background-repeat: no-repeat; 
-	background-position: center; 
-	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 
@@ -49,6 +49,11 @@ a{
    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fab{
+  color:black;
+  font-size:3em;
 }
 
 .button{
@@ -84,5 +89,3 @@ a{
   padding-top: 5%;
   width:40%;
 }
-
-
