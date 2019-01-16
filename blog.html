@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<style>
+
+ * {
+  box-sizing: border-box;
+}
+
+br{
+  line-height:2em;
+}
+
+.site-header {
+  padding: 2rem;
+  position: relative;
+}
+.site-title {
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+.site-subtitle {
+  font-style: italic;
+  opacity: 0.5;
+}
+.sign-in-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.site-wrap {
+  padding: 2rem;
+}
+
+.article-block {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+}
+time {
+  display: block;
+  padding: 0.25rem 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 0.75rem;
+}
+.article-body {
+  color: #9e9fa8;
+}
+
+.article-whole {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+body {
+  margin: 0;
+  background: #323041;
+  color: white;
+  font-family: 'PT Serif', serif;
+  line-height: 1.4;
+}
+h1, h2, h3, h4, h5, h6,
+.site-title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+}
+h1 {
+  font-size: 3.0rem;
+  letter-spacing: 0.1rem;
+}
+
+a svg {
+  fill: currentcolor;
+  vertical-align: bottom;
+}
+a:hover,
+a:focus {
+  background: rgba(0, 0, 0, 0.33);
+}
+
+.start-hidden {
+  display: none;
+}
+
+</style>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129060124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129060124-1');
+  </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Web Designer & Developer. NJ.">
+    <meta name="author" content="Gabriela Johnson">
+    <meta name="keywords" content="Gabriela Johnson, gabrielajohnson.com, web designer, web developer, gabby johnson, tcnj, the college of new jersey">
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Gabriela Johnson</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <!--<link href="css/style.css" rel="stylesheet">-->
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Condiment" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel ="stylesheet" href = "css/gallery.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+   <!--<link rel="stylesheet" href="gallery-clean.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+
+
+<body>
+
+
+<div class="topnav" id="myTopnav">
+    <p>Gabriela Johnson</p>
+    <div class = "links">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<div id = "page2">
+<header class="site-header">
+
+  <a id="sign-in-button" class="button sign-in-button">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path>
+    </svg> Sign In
+  </a>
+  <a id="new-post-button" class="button sign-in-button" style="display:none">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M20.71,4.04C21.1,3.65 21.1,3 20.71,2.63L18.37,0.29C18,-0.1 17.35,-0.1 16.96,0.29L15,2.25L18.75,6M17.75,7L14,3.25L4,13.25V17H7.75L17.75,7Z"></path>
+</svg> New Post
+  </a>
+</header>
+
+<main class="site-wrap">
+
+  <section id="new-post" class="article-form" style="display: none;">
+    <h2>New Post</h2>
+    <form id="message-form" action="#">
+      <h4><label for="new-post-title">Title</label></h4>
+      <input type="text" id="new-post-title">
+      <br />
+      <br />
+      <h4><label for="new-post-message">Message</label></h6>
+       <textarea rows="3" id="new-post-content"></textarea>
+       <br />
+       <br />
+       <button type="submit">Add post</button>
+     </form>
+   </section>
+
+  <div id="articles-list">
+    <div class="articles-container" />
+  </div>
+  
+  <article id="article-whole" class="article-whole start-hidden" >
+    <div></div>
+  </article>
+  
+</main>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAFul-uqSNrwaFFvezkhMm1QNhqMpnAgNo",
+    authDomain: "hotel-rooms-7be1d.firebaseapp.com",
+    databaseURL: "https://hotel-rooms-7be1d.firebaseio.com",
+    projectId: "hotel-rooms-7be1d",
+    storageBucket: "hotel-rooms-7be1d.appspot.com",
+    messagingSenderId: "90248169521"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+
+</body>
+</html>
+
+
+<script>
+
+var blog_api_url = 'https://us-central1-hotel-rooms-7be1d.cloudfunctions.net/posts';
+var posts_list = document.getElementById('articles-list');
+var post_full = document.getElementById('article-whole');
+var posts_container = posts_list.querySelector('.articles-container');
+
+// track authenticated user to avoid triggering on refresh
+var currentUID;
+
+var loadJsonFromFirebase = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", function () {
+        callback(JSON.parse(this.response));
+    });
+    xhr.open("GET", url);
+    xhr.send();
+};
+
+var getQueryParam = function(param) {
+  let params = window.location.search.substr(1);
+  params = params.split("&");
+  let paramList = {};
+  for (let i = 0; i < params.length; i++) {
+    let tmp = params[i].split("=");
+    paramList[tmp[0]] = decodeURI(tmp[1]);
+  }
+  return paramList[param];
+}
+
+
+// hide the individual post and show the list of posts
+const showListClick = (e) => {
+  // hide the single post
+  post_full.classList.add('start-hidden');
+  // show the full list
+  posts_container.classList.remove('start-hidden');
+}
+
+
+// handle selecting the links in the list
+const showPostClick = (e) => {
+  let post_id = e.target.dataset.post;
+
+  if (post_id) {
+    // load the post from ajax call
+    loadJsonFromFirebase(blog_api_url + '/' + post_id, function(data) {
+      let div = document.createElement('div');
+      let ts = new Date(data.created);
+      div.innerHTML = `<article class="article-block">
+            <h2>${data.title}</h2>
+            <time>${ts.toDateString()}</time>
+            <div class="excerpt">
+              <p>${data.content}</p>
+            </div>
+          </article>`;
+      post_full.replaceChild(div, post_full.firstChild);
+
+      // hide the full list
+      posts_container.classList.add('start-hidden');
+      // show the single post
+      post_full.classList.remove('start-hidden');
+    });
+  }
+};
+
+// toggle buttons on sign in/out auth changes
+const onLogInOutChange = function(user) {
+
+  // Ignore token refresh events
+  if (user && currentUID === user.uid) {
+    return;
+  }
+
+  // If logged in, show the new post button
+  if (user) {
+    currentUID = user.uid;
+    document.getElementById('sign-in-button').style.display = 'none';
+    document.getElementById('new-post-button').style.display = 'block';
+  } else {
+    currentUID = null;
+    document.getElementById('sign-in-button').style.display = 'block';
+    document.getElementById('new-post-button').style.display = 'none';
+  }
+}
+
+//document.getElementById('post-view-all').addEventListener('click', showListClick);
+posts_list.addEventListener('click', showPostClick);
+
+loadJsonFromFirebase(blog_api_url, function(data) {
+  let list = document.createElement('div');
+  Object.keys(data).forEach(function(key) {
+    let ts = new Date(data[key].created);
+    list.innerHTML += `<article class="article-block">
+      <h2>${data[key].title}</h2>
+      <time>${ts.toDateString()}</time>
+      <div class="excerpt">
+        <p>${data[key].content.substr(0, 150)}...</p>
+      </div>
+      <a data-post="${key}">Read Post</a>
+    </article>`;
+  });
+  posts_container.insertBefore(list, posts_container.firstChild);
+});
+
+// Bindings on load.
+document.addEventListener('DOMContentLoaded', function() {
+
+  document.getElementById('sign-in-button').addEventListener('click', function() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
+  });
+
+  // Listen for auth state changes
+  firebase.auth().onAuthStateChanged(onLogInOutChange);
+  
+  // show the new post form
+  document.getElementById('new-post-button').addEventListener('click', function() {
+    document.getElementById('new-post').style.display = '';
+  });
+  
+  // Saves message on form submit.
+  let messageForm = document.getElementById('message-form');
+  messageForm.onsubmit = function(e) {
+
+    e.preventDefault();
+    let postTitle = document.getElementById('new-post-title');
+    let postContent = document.getElementById('new-post-content');
+    let title = postTitle.value;
+    let content = postContent.value;
+
+    if (content) {
+      firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function (idToken) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", function () {
+          // on success, display the post at the top of the list & hide the form
+          postTitle.value = '';
+          postContent.value = '';
+          document.getElementById('new-post').style.display = 'none';
+
+          let postDetails = JSON.parse(this.response);
+          let div = document.createElement('div');
+          let ts = new Date(postDetails.created);
+          div.innerHTML += `<article class="article-block">
+            <h2>${postDetails.title}</h2>
+            <time>${ts.toDateString()}</time>
+            <div class="excerpt">
+              <p>${postDetails.content}</p>
+            </div>
+          </article>`;
+          posts_container.insertBefore(div, posts_container.firstChild);
+        });
+        xhr.open("POST", blog_api_url);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify({"title": title, "content": content, "token": idToken}));
+      }).catch(function (error) {
+        // TODO: handle error, not authorized
+      });
+    } else {
+      // TODO: display box around the missing content field
+    }
+  }
+
+});
+
+</script>

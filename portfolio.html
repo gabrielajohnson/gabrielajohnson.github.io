@@ -23,44 +23,35 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <title>Gabriela Johnson</title>
 
-    <!-- Bootstrap core CSS -->
-    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
-
-    <!-- Custom styles for this template -->
-    <!--<link href="css/style.css" rel="stylesheet">-->
-
-    <!--<link href="https://fonts.googleapis.com/css?family=Condiment" rel="stylesheet">-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel = "stylesheet" href = "css/style.css">
     <link rel ="stylesheet" href = "css/gallery.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-   <!--<link rel="stylesheet" href="gallery-clean.css">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
   </head>
 
 
 <body>
 
 
-<div class="topnav" id="myTopnav">
-    <p>Gabriela Johnson</p>
-    <div class = "links">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+<nav>
+  <p>Gabriela Johnson</p>
+  <input type = "checkbox" id = "nav-button">
+  </input>
+  <label for = "nav-button">&#9776;</label>
+  <ul>
+    <li><a href = "http://www.gabrielajohnson.com">Home</a></li>
+    <li><a href = "portfolio.html">Portfolio</a></li>
+    <li><a href = "contact.html">Contact</a></li>
+  </ul>
+ 
+</nav>
 
 <div id = "page2">
 <h1>Portfolio</h1>
 
-<nav>
+<div class = "gallery-menu">
   <ul>
     <li><a id = "showall">Show All</a></li>
     <li><a class="showSingle" target="1">3D</a></li>
@@ -70,7 +61,7 @@
     <li><a class="showSingle" target="5">Bai Brands</a></li>
     <li><a class="showSingle" target="6">Princeton Partners</a></li>
   </ul>
-</nav>
+</div>
 <!-- Header -->
 <!--<div class="header">
 
@@ -86,7 +77,7 @@
 The world of Galalea was created using the Three.js library, which makes it easier to utilize WebGL. The models were created in Blender, textures in Clip Studio Paint, and the Three.js editor was used to apply textures to the models.</p>
   <div class="row">
     <div class="column">
-      <a href="http://www.gabrielajohnson.com/Galalea/" target="_blank"><img src = "images/galalea_thumbnail.png"></a>
+      <a href="http://www.gabrielajohnson.com/Galalea/" target="_blank"><img src = "images/galalea_thumbnail.png" alt="galalea three.js world"></a>
     </div>
     <div class="column">
 

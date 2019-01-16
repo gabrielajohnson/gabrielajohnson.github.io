@@ -13,28 +13,27 @@ body {
     font-family: Arial;
 }
 
-nav{
+.gallery-menu{
   margin:auto;
 
 }
 
-nav a{
+.gallery-menu a{
   text-decoration:none;
   color:gray;
   cursor:pointer;
 }
 
-nav ul{
+.gallery-menu ul{
     text-align:center;
     padding:0px;
 }
 
-nav li{
+.gallery-menu li{
   display:inline;
   padding:10px;
 
 }
-
 
 
 .header {

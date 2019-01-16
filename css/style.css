@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Galada');
+
+html,body{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+
 /****NAV******************************/
 .topnav {
   overflow: hidden;
@@ -44,7 +52,7 @@ a:active {
   display: none;
 }
 
-.fab{
+.fa{
   color:#333333;
   font-size:3em;
 }
@@ -84,18 +92,22 @@ a:active {
         background-image:url('Users/GabrielaJohnson/GitHub/gabrielajohnson.github.io/images/leaves.jpg');
         background-repeat: no-repeat;
         background-size:cover;
-        height:100vh;
+        height:calc(100% - 50px);
         width:100vw;
-        position:fixed;
-        top:0;
         z-index:-1;
         display: flex;
         align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        top:50px;
+        position:absolute;
       }
 
   #page1 h1{
         font-size:100px;
         font-family: 'Galada', cursive;
+        line-height: 110px;
+        font-weight:normal;
   }
 
   #page1 p{
@@ -110,8 +122,9 @@ a:active {
 /**********************************/
 
 #page2{
-  height:100vh;
+  height:100%;
   width:100vw;
+  margin-top:50px;
 }
 
 /**********************************/
@@ -179,6 +192,125 @@ a:active {
         background-color:lightgrey;
         transition: background-color 1s;
       }
+
+
+/*CSS Menu*/
+
+
+nav{
+  width:100%;
+  background:white;
+  position:fixed;
+  top:0;
+  height:50px;
+  display:flex;
+  justify-content:space-between;
+}
+
+section{
+  background:lightgrey;
+  height: calc(100% - 50px);
+  top:50px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:-1;
+}
+
+h1{
+  margin:0;
+  font-size:50px;
+  font-family: arial;
+  text-align:center;
+}
+
+label{
+  display:none;
+}
+
+
+nav li{
+  display:inline;
+}
+
+#nav-button{
+  display:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:grey;
+  font-family:arial;
+  padding:0px 10px;
+}
+
+nav p{
+    font-family:Galada;
+    padding-left: 10px;
+    font-size: 25px;
+    margin: 5px;
+
+}
+
+
+@media only screen 
+  and (max-width: 736px) 
+  and (orientation: portrait) {
+    nav{
+      align-items:center;
+    }
+    
+    nav ul{
+      position:absolute;
+      top:34px;
+      width:100%;
+      background:lightgrey;
+      height:0;
+      overflow:hidden;
+      transition:height 1s;
+      padding:0px;
+    }
+    
+    nav li{
+      display:block;
+      width:100%;
+      padding:5px;   
+    }
+
+    nav li:hover{
+      background:darkgrey;
+    }
+    
+    label{
+      display:block;
+      padding:0px 10px;
+      font-size:30px;
+      cursor:pointer;
+    }
+    
+    label:hover{
+      color:grey;
+    }
+    
+    nav a{
+      width:100%;
+      display:block;
+    }
+    
+    #nav-button:checked ~ ul{
+        height:90px;
+        transition: height 1s;
+    }
+
+
+    
+    nav li:hover{
+      background:lightgrey;
+    }
+}
+
+/**/
 
 @media only screen
   and (min-device-width: 320px)
