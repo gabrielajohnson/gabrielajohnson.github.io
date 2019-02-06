@@ -94,7 +94,6 @@ a:active {
         background-size:cover;
         height:calc(100% - 50px);
         width:100vw;
-        z-index:-1;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -205,6 +204,7 @@ nav{
   height:50px;
   display:flex;
   justify-content:space-between;
+  z-index:2;
 }
 
 section{
@@ -250,6 +250,7 @@ nav p{
     padding-left: 10px;
     font-size: 25px;
     margin: 5px;
+    color:black;
 
 }
 
@@ -287,6 +288,7 @@ nav p{
       padding:0px 10px;
       font-size:30px;
       cursor:pointer;
+      color:grey;
     }
     
     label:hover{
@@ -299,7 +301,7 @@ nav p{
     }
     
     #nav-button:checked ~ ul{
-        height:90px;
+        height:115px;
         transition: height 1s;
     }
 
