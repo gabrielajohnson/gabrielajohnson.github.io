@@ -24,10 +24,13 @@
 
     <link rel = "stylesheet" href = "css/style.css">
     <link rel ="stylesheet" href = "css/gallery.css">
+    <link rel ="stylesheet" href = "css/gallery-clean.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <meta property="og:title" content="Gabriela Johnson Web Developer" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.gabrielajohnson.com/portfolio.html" />
@@ -288,6 +291,7 @@ The world of Galalea was created using the Three.js library, which makes it easi
     jQuery('#showall').click(function() {
       jQuery('.targetDiv').show();
      });
+
     jQuery('.showSingle').click(function() {
       jQuery('.targetDiv').hide();
       jQuery('#div' + $(this).attr('target')).show();
