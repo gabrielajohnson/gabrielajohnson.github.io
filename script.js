@@ -36,7 +36,7 @@ function processContent(name){
 function showContent(element) {
   var body = document.body;
   var temp = document.getElementById("project-page");
-
+  var gallery_home = document.getElementById("portfolio").getElementsByClassName("gallery")[0];
   gallery_home.toggleClass("hide");
   var x = element.getAttribute("name");
   processContent(x);
@@ -59,6 +59,8 @@ function closeit(){
 var body = document.body;
   clean("gallery");
   var temp = document.getElementById("project-page");
+  var gallery_home = document.getElementById("portfolio").getElementsByClassName("gallery")[0];
+  gallery_home.toggleClass("hide");
   body.style.overflow = "auto";
   temp.classList.add("hide");
 }
@@ -135,7 +137,6 @@ function keyCheck(e) {
   }
     
   $('#close').click(function(){
-    gallery_home.toggleClass("hide");
     $('#gallery-zoom').css('display','none');   
   });
   
