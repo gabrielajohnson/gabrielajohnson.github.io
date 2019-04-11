@@ -1,0 +1,83 @@
+<svg width="370" height="730" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+ <defs>
+  <path fill="khaki" id="svgEditorClosePathDefs" stroke="black" stroke-width="1px"/>
+  <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-black-white" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="100%">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_1" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_2" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_3" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_4" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_5" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_6" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_7" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_8" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_9" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_10" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+  <linearGradient gradientUnits="objectBoundingBox" id="svg_11" spreadMethod="pad" x1="NaN" x2="NaN" y1="NaN" y2="NaN">
+   <stop offset="0%" stop-color="darkgreen"/>
+   <stop offset="100%" stop-color="#578013"/>
+   <stop stop-color="darkgreen"/>
+  </linearGradient>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="none" height="1290" id="svgEditorBackground" width="1700" x="-700" y="-820"/>
+  <path d="m21.89504,692.22175a601.69979,940.97562 0 0 1 243.26157,-634.36318" fill="none" id="e4_circleArc" stroke="darkgreen" stroke-width="5px"/>
+  <path d="m187.80539,318.65286c-4.90496,9.6827 -18.29734,27.22655 -26.34433,34.51073s-26.12006,23.42775 -51.9555,20.78852s-23.46077,8.86097 -14.1707,-14.67557s36.32357,-27.01569 50.39752,-31.97058s30.10308,-3.56617 39.32638,-7.44647s2.0497,-0.92958 2.74664,-1.20664l-0.00001,0.00001z" fill="url(#svg_1)" id="e1_areaS3" stroke-width="1px"/>
+  <path d="m168.21659,377.08623c-4.90496,9.6827 -18.29735,27.22654 -26.34435,34.51072s-26.12005,23.42776 -51.95548,20.78853s-23.46077,8.86097 -14.17071,-14.67556s36.32358,-27.0157 50.39752,-31.97058s30.10309,-3.56618 39.32639,-7.44647s2.04969,-0.92958 2.74664,-1.20664l-0.00001,0z" fill="url(#svg_2)" id="e2_areaS3" stroke-width="1px"/>
+  <path d="m245.62779,183.51957c-4.90496,9.6827 -18.29735,27.22654 -26.34434,34.51072s-26.12006,23.42775 -51.9555,20.78852s-23.46077,8.86098 -14.17071,-14.67555s36.32358,-27.0157 50.39753,-31.97058s30.10308,-3.56618 39.32638,-7.44647s2.04968,-0.92959 2.74664,-1.20664z" fill="url(#svg_3)" id="e3_areaS3" stroke-width="1px"/>
+  <path d="m142.82128,138.16538c5.30771,9.46792 12.4145,30.36375 13.97986,41.10446s-5.09853,39.74324 -11.68463,54.72664s-5.71321,44.41892 -20.08201,3.59079s-6.19591,-45.71535 -0.96904,-56.66309s16.31086,-29.98468 18.22751,-39.80569s0.37008,-2.21999 0.52832,-2.95311l-0.00001,0z" fill="url(#svg_4)" id="e4_areaS3" stroke-width="1px"/>
+  <path d="m107.21648,221.24802c5.30771,9.46792 12.4145,30.36375 13.97986,41.10446s-5.09853,39.74324 -11.68464,54.72664s-5.7132,44.41892 -20.082,3.5908s-6.19592,-45.71535 -0.96904,-56.66309s16.31086,-29.98468 18.22751,-39.80569s0.37007,-2.22 0.52832,-2.95311l-0.00001,-0.00001z" fill="url(#svg_5)" id="e5_areaS3" stroke-width="1px"/>
+  <path d="m211.62779,254.51956c-4.90496,9.6827 -18.29735,27.22654 -26.34434,34.51072s-26.12006,23.42776 -51.95549,20.78853s-23.46077,8.86097 -14.17071,-14.67556s36.32358,-27.0157 50.39753,-31.97058s30.10308,-3.56618 39.32638,-7.44647s2.04969,-0.92958 2.74664,-1.20664l-0.00001,0z" fill="url(#svg_6)" id="e7_areaS3" stroke-width="1px"/>
+  <path d="m272.6278,133.51957c-4.90496,9.6827 -18.29735,27.22654 -26.34435,34.51072s-26.12005,23.42775 -51.95549,20.78852s-23.46077,8.86098 -14.17071,-14.67555s36.32358,-27.0157 50.39752,-31.97058s30.10309,-3.56618 39.32639,-7.44647s2.04968,-0.92959 2.74664,-1.20664z" fill="url(#svg_7)" id="e9_areaS3" stroke-width="1px"/>
+  <path d="m192.8789,77.84273c3.83484,10.15418 7.74261,31.87678 7.68703,42.73083s-10.97436,38.53677 -19.72343,52.36908s-12.28015,43.06831 -20.39302,0.55267s0.69801,-46.12803 7.50062,-56.1728s20.60428,-27.21377 23.96555,-36.63861s0.69734,-2.13987 0.96325,-2.84115l0,-0.00002z" fill="url(#svg_8)" id="e10_areaS3" stroke-width="1px"/>
+  <path d="m60.35508,281.9347c7.78217,7.56644 20.54057,25.57659 25.09719,35.428s14.58412,31.91269 4.36925,55.78927s1.47065,25.0352 -18.23034,9.15616s-14.96992,-42.72177 -15.50779,-57.63275s5.56231,-29.79887 4.60544,-39.7593s-0.27685,-2.23353 -0.33374,-2.98138l-0.00001,0z" fill="url(#lgrd2-black-white)" id="e11_areaS3" stroke-width="1px"/>
+  <path d="m35.86983,343.33444c8.2656,7.03515 22.18726,24.162 27.3855,33.69046s16.66292,30.8782 8.04964,55.37813s3.12329,24.88311 -17.58483,10.34189s-17.76281,-41.6381 -19.28573,-56.48085s3.5792,-30.10152 1.96562,-39.97685s-0.42398,-2.21034 -0.53021,-2.95277l0.00001,-0.00001z" fill="url(#lgrd2-black-white)" id="e6_areaS3" stroke-width="1px"/>
+  <path d="m331.916,10.68177c-2.93414,10.45008 -12.67011,30.25798 -19.15177,38.96439s-21.08101,28.04832 -46.93781,30.4693s-21.29704,13.24238 -16.74763,-11.64892s30.39504,-33.54686 43.24093,-41.13696s28.84005,-9.33619 37.13578,-14.93144s1.83051,-1.30943 2.4605,-1.71637z" fill="url(#svg_9)" id="e8_areaS3" stroke-width="1px"/>
+  <path d="m306.88031,76.87605c-4.69364,9.78689 -17.70206,27.6173 -25.58905,35.07442s-25.60538,23.9892 -51.49202,21.91137s-23.26291,9.36812 -14.48592,-14.36452s35.72863,-27.79776 49.69171,-33.05698s30.01858,-4.21874 39.15548,-8.29833s2.02903,-0.97385 2.7198,-1.26597l0,0.00001z" fill="url(#svg_10)" id="e12_areaS3" stroke-width="1px"/>
+  <path d="m234.03823,14.47258c3.83484,10.15418 7.74261,31.87678 7.68703,42.73083s-10.97436,38.53677 -19.72343,52.36908s-12.28015,43.06831 -20.39302,0.55267s0.69801,-46.12803 7.50062,-56.1728s20.60428,-27.21377 23.96555,-36.63861s0.69734,-2.13987 0.96325,-2.84115l0,-0.00002z" fill="url(#svg_11)" id="e13_areaS3" stroke-width="1px"/>
+ </g>
+</svg>

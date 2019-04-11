@@ -1,0 +1,30 @@
+{
+
+    "galalea": {
+      "title": "Galalea",
+      "description":"<a target='_blank' href = 'https://www.gabrielajohnson.com/Galalea'>View Website</a>The project “Galalea” is a fantastical 3D world that the user can explore in the browser. The user’s purpose is to collect the lost artifacts of Galalea scattered around the world. With its large trees and colorful structures, this world will capture the nostalgia of exploring 3D worlds like those of the MMO games, Free Realms and VMK. The world of Galalea was created using the Three.js library, which makes it easier to utilize WebGL. The models were created in Blender, textures in Clip Studio Paint, and the Three.js editor was used to apply textures to the models.",
+      "tools": ["Three.js","Blender","Clip Studio Paint"]
+    },
+
+    "bookofpresidents": {
+      "title": "Book of Presidents",
+      "description": "<a href='https://www.gabrielajohnson.com/The-Book-of-Presidents/'>View Website</a>The Book of Presidents is an Inprogress project that displays a biography of each President of the United States in an old historic book.  I developed it using HTML, CSS, JavaScript, AJAX, and the Wikipedia API."
+    },
+
+     "4path": {
+      "title": "4Path",
+      "description": "4Path provides the full range of out-patient anatomic pathology services including infectious disease testing and consultative services. This site was designed keeping the main blue of the logo in mind and shades of green, blue and purple to create a scientific theme.  The microscope at the bottom allows the user to browse and take a closer look at the company from its faculty, to the services they provide.<div class = 'designs'><img src = 'images/4path_home.png'><img src = 'images/4path_template.png'></div>"
+    },
+
+     "dashboarddesign": {
+      "title": "Dashboard Design",
+      "description": "At MDLAB I've have created many dashboard designs for internal applications.<br><h2>DMDL</h2>DMDL is an app used for managing the genetic testing of specimens sent into the company.  I embraced the colors of their parent company Genesis and created an attractive sidebar to organize the many pages of the application for easy access.  The app has a many different filters to organize, enter and search for information so I designed the main content page with that in mind.<img src='images/DMDL_submenu.png'><br><h2>X-Analytics</h2><br>X-Analytics is an app for Sales Representatives and other employees to be able to view important business statistics at once that can assist them in the field.  The user can view their performance, todo list, upcoming events as well as statistics all from the homepage.  The design is clean but has eye catching elements like the green sidebar and gold coin performance tracker.<img src='images/XAnalytics_Dashboard.png'>"
+    },
+
+      "genesisvillage": {
+      "title": "Genesis Village",
+      "description": "<a target='_blank' href='http://www.genesis-village.com'>View Website here</a><br>Genesis Village is website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
+    }
+}
+
+
