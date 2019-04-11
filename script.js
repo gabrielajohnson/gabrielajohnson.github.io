@@ -2,7 +2,7 @@
 
 
 var xmlhttp = new XMLHttpRequest();
-var gallery_home = document.getElementById("portfolio").getElementsByClassName("gallery")[0];
+
 
 function processContent(name){
   var temp = document.getElementById("project-page");
