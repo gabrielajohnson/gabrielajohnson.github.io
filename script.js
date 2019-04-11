@@ -2,7 +2,7 @@
 
 
 var xmlhttp = new XMLHttpRequest();
-
+var gallery_home = document.getElementById("portfolio").getElementsByClassName("gallery")[0];
 
 function processContent(name){
   var temp = document.getElementById("project-page");
@@ -37,6 +37,7 @@ function showContent(element) {
   var body = document.body;
   var temp = document.getElementById("project-page");
 
+  gallery_home.toggleClass("hide");
   var x = element.getAttribute("name");
   processContent(x);
 
@@ -134,6 +135,7 @@ function keyCheck(e) {
   }
     
   $('#close').click(function(){
+    gallery_home.toggleClass("hide");
     $('#gallery-zoom').css('display','none');   
   });
   
