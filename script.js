@@ -37,7 +37,7 @@ function showContent(element) {
   var body = document.body;
   var temp = document.getElementById("project-page");
   var gallery_home = document.getElementById("portfolio").getElementsByClassName("gallery")[0];
-  gallery_home.toggleClass("hide");
+  $(gallery_home).toggleClass("hide");
   var x = element.getAttribute("name");
   processContent(x);
 
@@ -60,7 +60,7 @@ var body = document.body;
   clean("gallery");
   var temp = document.getElementById("project-page");
   var gallery_home = document.getElementById("portfolio").getElementsByClassName("gallery")[0];
-  gallery_home.toggleClass("hide");
+  $(gallery_home).toggleClass("hide");
   body.style.overflow = "auto";
   temp.classList.add("hide");
 }
