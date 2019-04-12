@@ -204,6 +204,7 @@ h1{
 #project-page #description{
 	width:80%;
 	margin:auto;
+  margin-bottom:100px;
 }
 
 #project-page #description a{
