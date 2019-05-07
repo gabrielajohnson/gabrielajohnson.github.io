@@ -177,7 +177,7 @@ h1{
 	text-align:center;
 }
 
-#project-page::after {
+/*#project-page::after {
     content: '';
     position: fixed;
     background: white;
@@ -185,7 +185,7 @@ h1{
     height: 100%;
     top: 0;
     z-index: -1;
-}
+}*/
 
 #project-page #gallery{
 	display:flex;
