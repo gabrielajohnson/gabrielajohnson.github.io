@@ -97,6 +97,7 @@ h1{
 	animation: moveup 2s;
 	max-width:25%;
 	position:relative;
+	max-height:150px;
 }
 
 .gallery .thumbnail img{
