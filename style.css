@@ -98,6 +98,7 @@ h1{
 	max-width:25%;
 	position:relative;
 	max-height:150px;
+	height:0px;
 }
 
 .gallery .thumbnail img{
