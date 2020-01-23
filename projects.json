@@ -6,9 +6,9 @@
       "tools": ["Three.js","Blender","Clip Studio Paint"]
     },
 
-    "bookofpresidents": {
-      "title": "Book of Presidents",
-      "description": "<a href='https://www.gabrielajohnson.com/The-Book-of-Presidents/'>View Website</a>The Book of Presidents is an Inprogress project that displays a biography of each President of the United States in an old historic book.  I developed it using HTML, CSS, JavaScript, AJAX, and the Wikipedia API."
+    "calendarapp": {
+      "title": "Calendar App",
+      "description": "<a href='https://www.gabrielajohnson.com/CalendarApp/'>View Website</a>In the Calendar App you can add, edit and delete events, all saved to local storage.  You can also add notes up top and view the current weather for your local area.  This project uses HTML, CSS, JavaScript and the Weather API."
     },
 
      "4path": {
@@ -23,7 +23,7 @@
 
       "genesisvillage": {
       "title": "Genesis Village",
-      "description": "<a target='_blank' href='http://www.genesis-village.com'>View Website here</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
+      "description": "<a target='_blank' href='http://www.genesis-village.com'>View Website</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
     }
 }
 
