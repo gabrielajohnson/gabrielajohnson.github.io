@@ -1,12 +1,11 @@
-
-
-
 var xmlhttp = new XMLHttpRequest();
 
 
 function processContent(name){
   var temp = document.getElementById("project-page");
-  var header = temp.getElementsByTagName("h1")[0];
+  console.log("Temp " + temp);
+  var header = temp.getElementsByTagName("h2")[0];
+  console.log("Header " + header);
 
   while(header.firstChild){
     header.removeChild(header.firstChild);
