@@ -71,6 +71,14 @@ h1{
   margin-right:50px;
 }
 
+.icons img{
+	height: 18px;
+}
+
+.icons img:hover{
+	filter:  opacity(0.5);
+}
+
 .icons a{
 	color:black;
 	font-size:18px;
