@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html,body{
 	overscroll-behavior-y: none;
@@ -154,6 +155,20 @@ h1{
 
 .gallery .thumbnail a{
 	display:block;
+}
+
+#about h2{
+	border-bottom: 2px solid #1bc6c6;
+}
+
+#about h3{
+	color: #1bc6c6;
+	font-weight: 600;
+}
+
+#about h4 span{
+	color: #1bc6c6;
+	font-weight: 600;
 }
 
 #about .container{
@@ -339,6 +354,11 @@ h1{
     box-shadow: inset 0px 0px 5px grey;
     width:100%;
     max-width:600px;
+}
+
+#contact .submit {
+    background: teal;
+    color: white;
 }
 
 footer{
