@@ -28,7 +28,7 @@
 
       "textadventuregame": {
       "title": "Text Adventure Game",
-      "description": "<a target='_blank' href='http://www.genesis-village.com'>View Website</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
+      "description": "<a target='_blank' href='https://github.com/gabrielajohnson/Text-Adventure-Game'>View Website</a><br>I created this text based adventure game using Python, which can be played using Terminal.  The game takes place in a castle, where two castle workers are trapped in its mirrors.  It is up to the user to save them by collecting and combining objects around the castle, to create and do what is needed to free them."
     },
 
       "cssartcourse": {
