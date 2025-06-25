@@ -2,28 +2,28 @@
 
     "galalea": {
       "title": "Galalea",
-      "description":"<a target='_blank' href = 'https://www.gabrielajohnson.com/Galalea'>View Website</a>The project “Galalea” is a fantastical 3D world that the user can explore in the browser. The user’s purpose is to collect the lost artifacts of Galalea scattered around the world. With its large trees and colorful structures, this world will capture the nostalgia of exploring 3D worlds like those of the MMO games, Free Realms and VMK. The world of Galalea was created using the Three.js library, which makes it easier to utilize WebGL. The models were created in Blender, textures in Clip Studio Paint, and the Three.js editor was used to apply textures to the models.",
+      "description":"<a target='_blank' href = 'https://www.gabrielajohnson.com/Galalea'>View Website</a><p><b>Technologies Used: </b>JavaScript, Three.js</p><p>The project “Galalea” is a fantastical 3D world that the user can explore in the browser. The user’s purpose is to collect the lost artifacts of Galalea scattered around the world. With its large trees and colorful structures, this world will capture the nostalgia of exploring 3D worlds like those of the MMO games, Free Realms and VMK. The world of Galalea was created using the Three.js library, which makes it easier to utilize WebGL. The models were created in Blender, textures in Clip Studio Paint, and the Three.js editor was used to apply textures to the models.",
       "tools": ["Three.js","Blender","Clip Studio Paint"]
     },
 
     "calendarapp": {
       "title": "Calendar App",
-      "description": "<a href='https://www.gabrielajohnson.com/CalendarApp/'>View Website</a>In the Calendar App you can add, edit and delete events, all saved to local storage.  You can also add notes up top and view the current weather for your local area.  This project uses HTML, CSS, JavaScript and the Weather API."
+      "description": "<a href='https://www.gabrielajohnson.com/CalendarApp/'>View Website</a><p><b>Technologies Used: </b>JavaScript, Weather API, HTML, CSS</p><p>In the Calendar App you can add, edit and delete events, all saved to local storage.  You can also add notes up top and view the current weather for your local area.  This project uses HTML, CSS, JavaScript and the Weather API."
     },
 
      "4path": {
       "title": "4Path",
-      "description": "<a href='https://www.gabrielajohnson.com/Testing-Science-Site/'>View Website</a> 4Path provides the full range of out-patient anatomic pathology services including infectious disease testing and consultative services. This site was designed keeping the main blue of the logo in mind and shades of green, blue and purple to create a scientific theme.  The microscope at the bottom allows the user to browse and take a closer look at the company from its faculty, to the services they provide.<div class = 'designs'><img src = 'images/4path_home.png'><img src = 'images/4path_template.png'></div>"
+      "description": "<a target='_blank' href='https://www.gabrielajohnson.com/Testing-Science-Site/'>View Website</a> 4Path provides the full range of out-patient anatomic pathology services including infectious disease testing and consultative services. This site was designed keeping the main blue of the logo in mind and shades of green, blue and purple to create a scientific theme.  The microscope at the bottom allows the user to browse and take a closer look at the company from its faculty, to the services they provide.<div class = 'designs'><img src = 'images/4path_home.png'><img src = 'images/4path_template.png'></div>"
     },
 
      "dashboarddesign": {
       "title": "Dashboard Design",
-      "description": "At MDLAB I've have created many dashboard designs for internal applications.<br><h2>DMDL</h2>DMDL is an app used for managing the genetic testing of specimens sent into the company.  I embraced the colors of their parent company Genesis and created an attractive sidebar to organize the many pages of the application for easy access.  The app has a many different filters to organize, enter and search for information so I designed the main content page with that in mind.<img src='images/DMDL.png'><br><h2>X-Analytics</h2><br>X-Analytics is an app for Sales Representatives and other employees to be able to view important business statistics at once that can assist them in the field.  The user can view their performance, todo list, upcoming events as well as statistics all from the homepage.  The design is clean but has eye catching elements like the green sidebar and gold coin performance tracker.<img src='images/XAnalytics_Dashboard.png'>"
+      "description": "At MDLAB I have created many dashboard designs for internal applications.<br><h2>DMDL</h2>DMDL is an app used for managing the genetic testing of specimens sent into the company.  I embraced the colors of their parent company Genesis and created an attractive sidebar to organize the many pages of the application for easy access.  The app has a many different filters to organize, enter and search for information so I designed the main content page with that in mind.<img src='images/DMDL.png'><br><h2>X-Analytics</h2><br>X-Analytics is an app for Sales Representatives and other employees to be able to view important business statistics at once that can assist them in the field.  The user can view their performance, todo list, upcoming events as well as statistics all from the homepage.  The design is clean but has eye catching elements like the green sidebar and gold coin performance tracker.<img src='images/XAnalytics_Dashboard.png'>"
     },
 
       "genesisvillage": {
       "title": "Genesis Village",
-      "description": "<a target='_blank' href='http://www.genesis-village.com'>View Website</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
+      "description": "<a target='_blank' href='http://www.genesis-village.com'>View Website</a><p><b>Technologies Used: </b>JavaScript, WordPress, HTML, CSS</p><p><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
     },
 
       "textadventuregame": {
@@ -36,19 +36,13 @@
       "description": "<a target='_blank' href='https://www.gabrielajohnson.com/CSS-Art-Course/'>View Website</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
     },
 
-      "recipesapp": {
-      "title": "Recipes App",
-      "description": "<a target='_blank' href='https://recipeas-test.herokuapp.com/'>View Website</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
+      "recipeas": {
+      "title": "Recipeas App",
+      "description": "<a target='_blank' href='https://gabrielajohnson.pythonanywhere.com/'>View Website</a><br><p><b>Technologies Used: </b>Python, JavaScript, Django, MySQL</p><p>This app allows users to:</p><ul><li>Create an account</li><li>Add recipes to their account and mark them as public or private</li><li>Fields in the Recipe Form</li><ul><li>Title</li><li>Image</li><li>Description<li>Prep Time</li><li>Cook Time</li><li>Servings</li><li>Ingredients</li><li>Steps</li><li>Categories</li><li>Public or Private Field</li></ul><li>View the recipes of others by category such as 3 ingredient recipes or healthy recipes.</li> <li>They can view, comment, give a rating and review other recipes</li><li>Create lists and add recipes to these lists</li></ul><img src='images/recipeas_homepage.jpg'><p><b>Recipe</b></<img src='images/recipeas_recipe.jpg'><img src='images/recipeas_profile.jpg'><img src='images/recipeas_categories.jpg'>"
     },
-
-      "travelapp": {
-      "title": "Travel App",
-      "description": "<a target='_blank' href='https://e28p3.gabrielajohnson.me/'>View Website</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
-    },
-
-      "journalapp": {
-      "title": "Journal App",
-      "description": "<a target='_blank' href='http://167.99.228.57:8085/posts'>View Website</a><br>Genesis Village is a website to advertise a community of luxurious one and two bedroom apartments nestled in Hamilton (Mercer County) which features a vibrant and bustling local economy. I developed the website using HTML, CSS and JavaScript and converted it into a WordPress Template.  I designed all secondary pages for the site excluding the home page."
+      "bookworm": {
+      "title": "BookWorm",
+      "description": "<a target='_blank' href='https://bookworm-nszy.onrender.com/'>View Website</a><p>(In Progress)</p><p><b>Technologies Used: </b>Vue.js, Express, Node.js, MongoDB, Google Books API</p><p>In BookWorm, the user can keep track of all of the books they have read, including the dates they have read them, reread them and what their thoughts and review of the book was.</p><p>In this app the user can:</p><ul><li>Add Books by filling out a form, form fields include:</li> <ul> <li>Title</li> <li>Author</li> <li>Description</li> <li>Book Cover. If a cover is not uploaded, one will be generated by the site.</li> <li>Genre</li> <li>Start Date</li> <li>End Date</li> <li>Reread Start Date (As many as user chooses)</li> <li>Reread End Date (As many as user chooses)</li> <li>Rating</li> <li>Review</li> <li>Notes</li> <li>Include in Average Read Time (This is a box that allows the user to decide whether they want the amount of time they took to read this book to be included in their average read time)</li> </ul><li>Search for books using the Google Books API</li><li>Add books from the Google Books API search results</li><li>Edit the books after adding</li></ul><p>Coming Soon</p><ul> <li>Statistics Page</li></ul>"
     }
 }
 

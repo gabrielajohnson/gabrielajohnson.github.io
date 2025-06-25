@@ -303,12 +303,11 @@ h1{
   cursor:pointer;
 }
 
-#right-arrow i, #left-arrow i{
+#right-arrow span, #left-arrow span{
 	color: white;
     display: block;
     text-align: center;
     font-size: 40px;
-    padding: 5px;
 }
 
 #left-arrow{

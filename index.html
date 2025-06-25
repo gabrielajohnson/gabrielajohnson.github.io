@@ -52,13 +52,15 @@
 
  		<h1>Gabriela Johnson</h1>
  		<div class = "icons">
-      <a rel="noopener" target="_blank" href = "https://medium.com/@gabrielajohnson"><img src="images/icons/medium.svg" alt="medium icon"></a>
  			<a rel="noopener" target = "_blank" href = "https://codepen.io/gabrielajohnson/"><img src="images/icons/codepen.svg" alt="codepen icon"></a>
  			<a rel="noopener" target="_blank" href = "https://github.com/gabrielajohnson"><img src="images/icons/github.svg" alt="github icon"></a>
+      <a rel="noopener" target="_blank" href = "https://www.linkedin.com/in/gabriela-johnson"><img src="images/icons/linkedin.svg" alt="github icon"></a>
+      <a rel="noopener" target="_blank" href = "https://medium.com/@gabrielajohnson"><img src="images/icons/medium.svg" alt="medium icon"></a>
  		</div>
  	<div class = "categories">
  		<a href = "#portfolio">Projects</a>
  		<a href = "#design">Design</a>
+    <a href = "#articles">Articles</a>
  		<a href = "#about">About</a>
  		<a href ="#contact">Contact</a>
  	</div>
@@ -66,6 +68,14 @@
 
  <section id = "portfolio" class="page">
  	<div class = "gallery">
+    <div name = "recipeas" class = "thumbnail" onclick = "showContent(this)">
+ 			<p>Recipeas</p>
+ 			<img src = "images/recipeas_homepage_thumbnail.jpg" alt="screenshot of homepage of list of recipes">
+ 		</div>
+      <div name = "bookworm" class = "thumbnail" onclick = "showContent(this)">
+ 			<p>BookWorm</p>
+ 			<img src = "images/bookworm_thumbnail.png" alt="screenshot of BookWorm">
+ 		</div>
  		<div name = "galalea" class = "thumbnail" onclick = "showContent(this)">
  			<p>Galalea</p>
  			<img src = "images/galalea_thumbnail.jpg" alt="3d world with forest and houses">
@@ -303,7 +313,7 @@
 </section>
 
 <div id = "project-page" class="hide">
-	 	<p onclick = "closeit()" class="close">X</p>
+	 	<p onclick = "closeit()" class="close">&#x2716;</p>
  		<img class = "home-image" src = "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.suplugins.com%2Fpodium%2Fimages%2Fplaceholder-02.jpg&f=1" alt="placeholder">
  		<h2>Project name</h2>
  		<p id="description">Description</p>
@@ -311,11 +321,61 @@
 </div>
 
  <div id = "gallery-zoom">
-  <div id = "close">x</div>
-  <div id = "left-arrow"><i class="fas fa-caret-left"></i></div>
+  <div id = "close">&#x2716;</div>
+  <div id = "left-arrow"><span>&#10094;</span></div>
   <img src = "" id = "img-zoom" alt="none">
-  <div id = "right-arrow"><i class="fas fa-caret-right"></i></div>
+  <div id = "right-arrow"><span>&#10095;</span></div>
 </div>
+
+<section id="articles" class="page hide">
+  <div class = "container">
+    <h2>Articles</h2>
+    <h3>Articles I've Written</h3>
+    <ul>
+      <li><a href = "https://medium.com/@gabrielajohnson/how-to-clone-and-push-changes-to-your-github-repository-in-4-minutes-b07827515fd0" target="_blank">How to Clone and Push Changes to your Github Repository in 4 minutes
+      </a></li>
+      <li><a href = "https://medium.com/@gabrielajohnson/how-to-make-a-responsive-navigation-menu-using-only-css-2c15130de1fc" target="_blank">How to Make a Responsive Navigation Menu using only CSS
+      </a></li>
+      <li><a href = "https://medium.com/@gabrielajohnson/how-to-create-an-interactive-jquery-accordion-a02dea411efc" target="_blank">How to create an Interactive JQuery Accordion
+      </a></li>
+      <li><a href = "https://medium.com/@gabrielajohnson/css-animation-tutorial-a-cute-sleepy-ghost-afc035f04a9f" target="_blank">CSS Animation Challenge: A Quick Way to make a Sleepy Ghost
+      </a></li>
+    </ul>
+    <h3>Articles I've been Featured In</h3>
+    <ul>
+      <li><a href = "https://codepen.io/spark/163" target="_blank">The CodePen Spark Newsletter
+      </a></li>
+      <li><a href = "https://blog.avada.io/css/gallery/" target="_blank">CSS Gallery Examples 2025 - Avada
+      </a></li>
+      <li><a href = "https://uicookies.com/css-image-galleries/" target="_blank">35 CSS Gallery Examples Crafted To Entice More Users 2025 - uiCookies
+      </a></li>
+      <li><a href = "https://techknowprime.com/css-galleries/" target="_blank">25 Best Free CSS Galleries In 2025 - Techknow Prime
+      </a></li>
+      <li><a href = "https://freefrontend.com/css-gallery/" target="_blank">FreeFrontend CSS Galleries
+      </a></li>
+      <li><a href = "http://foodforblogger.blogspot.com/" target="_blank">Food for Blogger Galleries and Magic
+      </a></li>
+      <li><a href = "https://code.sololearn.com/WFWc9gV3Kq1p/#html" target="_blank">SoloLearn
+      </a></li>
+      <li><a href = "https://www.facebook.com/programistycznekolkoplastyczne/posts/2736116173130367" target="_blank">Programming Art Club
+      </a></li>
+      <li><a href = "https://dev.to/webdeasy/top-20-css-navigation-menus-3jdj" target="_blank">35 CSS Menus (+ Animations)
+      </a></li>
+      <li><a href = "https://webartdevelopers.com/blog/hexagon-gallery/" target="_blank">Web Art Developers Hexagon Gallery
+      </a></li>
+      <li><a href = "https://devsnap.me/css-gallery" target="_blank">65+ CSS Galleries - Free Code + Demos
+      </a></li>
+      <li><a href = "https://www.sliderrevolution.com/resources/css-gallery/" target="_blank">The best CSS gallery code snippets to use yourself
+      </a></li>
+      <li><a href = "https://frontendresource.com/css-clip-path-examples/" target="_blank">35 Creative use of CSS clip-path examples
+      </a></li>
+      <li><a href = "https://frontendresource.com/css-hexagons/" target="_blank">31 CSS Hexagons - FrontEnd Resource
+      </a></li>
+      <li><a href = "https://code.tutsplus.com/articles/50-excellent-image-galleries-you-can-use-today--net-4063" target="_blank">36 Excellent Free Image Galleries: JavaScript, React, PHP, or CSS - envato tuts
+      </a></li>
+    </ul>
+  </div>
+</section>
 
 
 
